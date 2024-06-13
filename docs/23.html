@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23andYou Test Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .section {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .pie-chart-container {
+            position: relative;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .pie-chart {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            clip: rect(0, 200px, 200px, 100px);
+        }
+        .pie-chart .slice {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            clip: rect(0, 100px, 200px, 0);
+        }
+        .pie-chart .swedish {
+            background-color: #4CAF50;
+            transform: rotate(153deg);
+        }
+        .pie-chart .jewish {
+            background-color: #FF5733;
+            transform: rotate(180deg);
+        }
+        .pie-chart .other {
+            background-color: #C70039;
+            transform: rotate(9deg);
+        }
+        .probability-bar {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .probability-bar span {
+            display: inline-block;
+            width: 200px; 
+        }
+        .probability-bar  .bar {
+            height: 100%;
+            background-color: #4CAF50;
+
+        }
+        .probability-bar  .pctg-tag {
+            width: 100px;
+        }
+        .probability-bar > div {
+            height: 20px;
+            margin-left: 10px;
+            flex: 1;
+        }
+        .health-list, .traits-list, .wellness-list {
+            padding: 10px 0;
+        }
+        /* RESET STYLES
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        .chart-skills {
+          margin: 0 auto;
+          padding: 0;
+          list-style-type: none;
+        }
+
+        .chart-skills *,
+        .chart-skills::before {
+          box-sizing: border-box;
+        }
+
+
+        /* CHART-SKILLS STYLES
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        .chart-skills {
+          position: relative;
+          width: 350px;
+          height: 175px;
+          /*overflow: hidden;*/
+        }
+
+        .chart-skills::before,
+        .chart-skills::after {
+          position: absolute;
+        }
+
+        .chart-skills::before {
+          content: '';
+          width: inherit;
+          height: inherit;
+          border: 45px solid rgba(211, 211, 211, .3);
+          border-bottom: none;
+          border-top-left-radius: 175px;
+          border-top-right-radius: 175px;
+        }
+
+        .chart-skills::after {
+          content: '100% You';
+          left: 50%;
+          bottom: 10px;
+          transform: translateX(-50%);
+          font-size: 1.1rem;
+          font-weight: bold;
+          color: cadetblue;
+        }
+
+        .chart-skills li {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: inherit;
+          height: inherit;
+          border: 45px solid;
+          border-top: none;
+          border-bottom-left-radius: 175px;
+          border-bottom-right-radius: 175px;
+          transform-origin: 50% 0;
+          transform-style: preserve-3d;
+          backface-visibility: hidden;
+          animation-fill-mode: forwards;
+          animation-duration: .4s;
+          animation-timing-function: linear;
+        }
+
+        .chart-skills li:nth-child(1) {
+          z-index: 4;
+          border-color: #9E0059;
+          animation-name: rotate-one;
+        }
+
+        .chart-skills li:nth-child(2) {
+          z-index: 3;
+          border-color: #FF0054;
+          animation-name: rotate-two;
+          animation-delay: .4s;
+        }
+
+        .chart-skills li:nth-child(3) {
+          z-index: 2;
+          border-color: #FF5400;
+          animation-name: rotate-three;
+          animation-delay: .8s;
+        }
+
+        .chart-skills li:nth-child(4) {
+          z-index: 1;
+          border-color: #FFBD00;
+          animation-name: rotate-four;
+          animation-delay: 1.2s;
+        }
+
+        .chart-skills span {
+          position: absolute;
+          font-size: .85rem;
+          backface-visibility: hidden;
+          animation: fade-in .4s linear forwards;
+        }
+
+        .chart-skills li:nth-child(1) span {
+          top: 30px;
+          left: -130px;
+          transform: rotate(-21.6deg);
+        }
+
+        .chart-skills li:nth-child(2) span {
+          top: 120px;
+          left: -100px;
+          transform: rotate(-79.2deg);
+          animation-delay: .4s;
+        }
+
+        .chart-skills li:nth-child(3) span {
+          top: 20px;
+          left: -115px;
+          transform: rotate(-140.4deg);
+          animation-delay: .8s;
+        }
+
+        .chart-skills li:nth-child(4) span {
+          top: 32px;
+          left: -154px;
+          transform: rotate(-180deg);
+          animation-delay: 1.2s;
+        }
+
+
+        /* ANIMATIONS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        @keyframes rotate-one {
+          100% {
+            transform: rotate(21.6deg);
+            /**
+             * 12% => 21.6deg
+             */
+          }
+        }
+
+        @keyframes rotate-two {
+          0% {
+            transform: rotate(21.6deg);
+          }
+          100% {
+            transform: rotate(79.2deg);
+            /**
+             * 32% => 57.6deg 
+             * 57.6 + 21.6 => 79.2deg
+             */
+          }
+        }
+
+        @keyframes rotate-three {
+          0% {
+            transform: rotate(79.2deg);
+          }
+          100% {
+            transform: rotate(140.4deg);
+            /**
+             * 34% => 61.2deg 
+             * 61.2 + 79.2 => 140.4deg
+             */
+          }
+        }
+
+        @keyframes rotate-four {
+          0% {
+            transform: rotate(140.4deg);
+          }
+          100% {
+            transform: rotate(180deg);
+            /**
+             * 22% => 39.6deg  
+             * 140.4 + 39.6 => 180deg
+             */
+          }
+        }
+
+        @keyframes fade-in {
+          0%,
+          90% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>23andMe Test Results</h1>
+        </div>
+
+        <div class="section">
+            <h2>Ancestry Composition</h2>
+            <div class="pie-chart-container">
+                
+                <ul class="chart-skills">
+                  <li>
+                    <span>Scandinavian</span>
+                  </li>
+                  <li>
+                    <span>French & German</span>
+                  </li>
+                  <li>
+                    <span>British & Irish</span>
+                  </li>
+                  <li>
+                    <span>Ashkenazi Jewish</span>
+                  </li>
+                </ul>
+            </div>
+            <p>This individual's ancestry composition is primarily Swedish, with a notable percentage of Ashkenazi Jewish ancestry and some minor other ancestries.</p>
+        </div>
+
+        <div class="section">
+            <h2>Health Reports</h2>
+            <div class="health-list">
+                <div class="probability-bar">
+                    <span>Late-Onset Alzheimer's Disease</span>
+                    <div><div class ="bar" style="width: 30%; background-color: #E3E939;"></div></div>
+                    <span class="pctg-tag">30%</span>
+
+                </div>
+                <div class="probability-bar">
+                    <span>Hereditary Thrombophilia</span>
+                    <div><div class ="bar" style="width: 70%; background-color: #F15946;"></div></div>
+                    <span class="pctg-tag">70%</span>
+                </div>
+                <div class="probability-bar">
+                    <span>Parkinson's Disease</span>
+                    <div><div class ="bar" style="width: 50%; background-color: #F9C22E;"></div></div>
+                    <span class="pctg-tag">50%</span>
+                </div>
+                <!-- Add more health reports as necessary -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Trait Reports</h2>
+            <div class="traits-list">
+                <div class="probability-bar">
+                    <span>Freckles</span>
+                    <div><div class ="bar" style="width: 80%; background-color: brown;"></div></div>
+                    <span class="pctg-tag">80%</span>
+                </div>
+                <div class="probability-bar">
+                    <span>Cleft Chin</span>
+                    <div><div class ="bar" style="width: 10%; background-color: #d2b194;"></div></div>
+                    <span class="pctg-tag">10%</span>
+                </div>
+                <div class="probability-bar">
+                    <span>Eye Color: Blue</span>
+                    <div><div class ="bar" style="width: 90%; background-color: #50d4cb;"></div></div>
+                    <span class="pctg-tag">90%</span>
+                </div>
+                <!-- Add more trait reports as necessary -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Wellness Reports</h2>
+            <div class="wellness-list">
+                <div class="probability-bar">
+                    <span>Lactose Intolerance</span>
+                    <div><div class ="bar" style="width: 40%; background-color: #F9C22E;"></div></div>
+                    <span class="pctg-tag">40%</span>
+                </div>
+                <div class="probability-bar">
+                    <span>Deep Sleep</span>
+                    <div><div class ="bar" style="width: 60%; background-color: #FAA12D;"></div></div>
+                    <span class="pctg-tag">60%</span>
+                </div>
+                <div class="probability-bar">
+                    <span>Muscle Composition</span>
+                    <div><div class ="bar" style="width: 70%; background-color: #F15946;"></div></div>
+                    <span class="pctg-tag">70%</span>
+                </div>
+                <!-- Add more wellness reports as necessary -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
