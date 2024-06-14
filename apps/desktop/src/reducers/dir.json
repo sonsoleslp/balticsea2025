@@ -1,0 +1,176 @@
+{
+  "C:": {
+    "type": "folder",
+    "name": "C:",
+    "info": {
+      "size": "104000000000",
+      "used": "90000000000",
+      "spid": "%cdrive%"
+    },
+    "data": {
+      "backup": {
+        "type": "folder",
+        "name": "backup",
+        "data": {
+          "config": {
+            "type": "folder",
+            "name": "config"
+          }
+        }
+      },
+      "Microsoft": {},
+      "Program Files": {
+        "data": {
+          "7-Zip": {},
+          "Adobe": {},
+          "AMD": {},
+          "BraveSoftware": {},
+          "Common Files": {},
+          "Dell": {}
+        }
+      },
+      "temp": {},
+      "Users": {
+        "type": "folder",
+        "name": "Users",
+        "data": {
+          "Public": {
+            "data": {
+              "Public Documents": {},
+              "Public Downloads": {},
+              "Public Music": {},
+              "Public Pictures": {},
+              "Public Videos": {}
+            }
+          },
+          "Blue": {
+            "type": "folder",
+            "name": "Blue",
+            "info": {
+              "spid": "%user%",
+              "icon": "user"
+            },
+            "data": {
+              "AppData": {},
+              "Desktop": {
+                "info": {
+                  "spid": "%desktop%",
+                  "icon": "desk"
+                }
+              },
+              "Documents": {
+                "info": {
+                  "spid": "%documents%",
+                  "icon": "docs"
+                },
+                "data": {
+                  "2020": {
+                    "data": {
+                      "Covid": {},
+                      "Lockdown": {},
+                      "Windows 11 Release": {},
+                      "Vaccination": {}
+                    }
+                  },
+                  "Adobe": {},
+                  "Attachments": {}
+                }
+              },
+              "Downloads": {
+                "info": {
+                  "spid": "%downloads%",
+                  "icon": "down"
+                },
+                "data": {
+                  "tmp": {},
+                  "Atomforces": {},
+                  "Compressed": {},
+                  "textures": {},
+                  "Not A Virus": {}
+                }
+              },
+              "Music": {
+                "info": {
+                  "spid": "%music%",
+                  "icon": "music"
+                },
+                "data": {
+                  "Hip Hop": {},
+                  "Old School": {},
+                  "60s Songs": {}
+                }
+              },
+              "Pictures": {
+                "info": {
+                  "spid": "%pictures%",
+                  "icon": "pics"
+                },
+                "data": {
+                  "2007": {},
+                  "High School": {}
+                }
+              },
+              "Videos": {
+                "info": {
+                  "spid": "%videos%",
+                  "icon": "vid"
+                }
+              },
+              "Contacts": {},
+              "Favorites": {},
+              "Tests": {
+                "type": "folder",
+                "name": "Test Results",
+                "data": {
+                  "2024-02-12":{},
+                  "2024-02-13":{},
+                  "2024-02-14":{},
+                  "2024-02-16":{},
+                  "2024-02-19":{},
+                  "2024-02-22":{},
+                  "2024-02-29":{},
+                  "2024-03-02":{},
+                  "2024-03-12":{},
+                  "2024-03-15":{},
+                  "2024-03-26":{},
+                  "2024-04-04":{},
+                  "2024-04-07":{},
+                  "2024-04-14":{},
+                  "2024-04-24":{},
+                  "2024-05-05":{},
+                  "2024-05-07":{},
+                  "2024-05-09":{},
+                  "2024-05-13":{},
+                  "2024-05-23":{},
+                  "2024-05-29":{},
+                  "2024-06-11":{},
+                  "2024-06-19":{},
+                  "2024-06-30":{},
+                  "2024-07-03":{},
+                  "2024-07-19":{},
+                  "2024-07-24":{},
+                  "2024-08-03":{}
+                }
+              },
+              "Programs": {}
+            }
+          }
+        }
+      },
+      "Windows": {}
+    }
+  },
+  "D:":{
+    "name": "D:",
+    "info":{
+      "spid": "%ddrive%"
+    },
+    "data": {
+      "Adobe": {},
+      "Programs": {},
+      "Unity": {},
+      "WindowsApp": {},
+      "Temp": {}
+    }
+  }
+}

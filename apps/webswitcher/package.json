@@ -1,0 +1,88 @@
+{
+  "name": "Webswitcher",
+  "version": "1.0.0",
+  "description": "App for transitioning among URLs based on the escape room state in Escapp",
+  "author": "Aldo Gordillo <a.gordillo@upm.es>",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "clean": "rimraf dist rimraf dist_scorm",
+    "production": "rimraf dist && cross-env NODE_ENV=production webpack --config webpack.production.config.js --progress --profile --colors && cross-env npm run copy_assets && cross-env npm run package && cross-env npm run publish_app",
+    "copy_assets": "cross-env mkdir -p dist/assets && cross-env cp -r app/assets dist/ && cross-env rm -rf dist/assets/scss",
+    "package": "rimraf dist_zip && cross-env node tasks/package.js",
+    "escapp": "cross-env node tasks/escapp.js",
+    "escapp_and_start": "cross-env npm run escapp && cross-env npm start",
+    "lint": "eslint --fix --ext .js,.jsx,.es6 app/main.js app/components app/config/ app/vendors/I18n.js app/vendors/Utils.js app/constants app/reducers",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "precommit": "cross-env npm run lint && npm test",
+    "prepush": "cross-env npm run lint && npm test",
+    "publish_app": "rm -rf ../../docs/webswitcher && cp -r dist ../../docs/webswitcher"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/shim.js"
+    ],
+    "mapCoverage": true,
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx,ts,tsx}"
+    ],
+    "moduleNameMapper": {
+      "\\.(ejs)$": "<rootDir>/shim.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/shim.js",
+      "\\.(css|scss|less)$": "<rootDir>/shim.js"
+    },
+    "testMatch": [
+      "**/?(*.)(spec|test).js?(x)"
+    ]
+  },
+  "dependencies": {
+    "cross-env": "5.1.0",
+    "es6-promise": "^4.2.8",
+    "fs-extra": "^5.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "zip-folder": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.0.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@hot-loader/react-dom": "^16.8.6",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "0.28.7",
+    "enzyme": "3.1.0",
+    "enzyme-adapter-react-16": "1.0.1",
+    "eslint": "6.6.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-react": "^7.16.0",
+    "file-loader": "4.2.0",
+    "html-webpack-plugin": "3.2.0",
+    "husky": "0.15.0-beta.2",
+    "jest": "21.2.0",
+     "sass": "^1.45.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "open-browser-webpack-plugin": "0.0.5",
+    "react-hot-loader": "^4.12.15",
+    "react-test-renderer": "^16.0.0",
+    "rimraf": "2.6.2",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^0.19.0",
+    "url-loader": "0.6.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
