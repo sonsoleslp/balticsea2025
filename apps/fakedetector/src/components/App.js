@@ -26,13 +26,8 @@ export default function App() {
 
   useEffect(() => {
     I18n.init(GLOBAL_CONFIG);
-    if(I18n.getLocale() === "en"){
-      setNews(NEWSen);
-    } else if(I18n.getLocale() === "it"){
-      setNews(NEWSit);
-    } else {
-      setNews(NEWSes);
-    }
+    setNews(NEWSen);
+    
     //LocalStorage.init(GLOBAL_CONFIG.localStorageKey);
     GLOBAL_CONFIG.escapp.onNewErStateCallback = er_state => restoreState(er_state);
     escapp = new ESCAPP(GLOBAL_CONFIG.escapp);

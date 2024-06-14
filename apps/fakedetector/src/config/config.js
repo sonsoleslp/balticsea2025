@@ -9,8 +9,8 @@ let ESCAPP_LOCALES = {
 
 
 export let GLOBAL_CONFIG = {
-  availableLocales:["es", "en", "it"],
-  defaultLocale:"es",
+  availableLocales:["en"],
+  defaultLocale:"en",
   locale: undefined,
   localStorageKey:"NOUSOmaldito_fake_2022",
   restoreState:"AUTO",
@@ -19,7 +19,7 @@ export let GLOBAL_CONFIG = {
     localStorageKey:"escapp_maldito_fake_2022",
     imagesPath:"assets/images/",
     I18n:{
-      availableLocales:["es", "en"],
+      availableLocales:["en"],
       defaultLocale:"en",
       locales:ESCAPP_LOCALES,
     },

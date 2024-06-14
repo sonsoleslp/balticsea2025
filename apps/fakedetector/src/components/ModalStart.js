@@ -6,7 +6,7 @@ const customStyles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: "5vh 5vw",
+    //margin: "5vh 5vw",
     backgroundColor: 'rgba(0, 0, 0, 0.5)'
   },
 }; 
