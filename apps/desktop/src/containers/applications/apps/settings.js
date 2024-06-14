@@ -69,8 +69,8 @@ export const Settings = () => {
               <div className="account" onClick={() => setPage("Accounts")}>
                 <img src="img/settings/defAccount.webp" alt="" height={60} width={60} />
                 <div>
-                  <p>David</p>
-                  <p>Europe Analytica</p>
+                  <p>Gabrielle</p>
+                  <p>Baltic lab</p>
                 </div>
               </div>
               <input type="text" className="search" placeholder="Find a setting " name="search" />
@@ -107,7 +107,7 @@ export const Settings = () => {
                               <div className="left">
                                 <img src={`img/wallpaper/${wall.src}`} alt="" className="device_img" />
                                 <div className="column_device">
-                                  <p className="device_name">David</p>
+                                  <p className="device_name">Gabrielle</p>
                                   <p className="device_model">NS14A8</p>
                                   <p className="device_rename">Rename</p>
                                 </div>
@@ -185,8 +185,8 @@ export const Settings = () => {
                             <div key={i} className="accountsTop ">
                               <img src="img/settings/defAccount.webp" alt="" width={90} />
                               <div>
-                                <p>David</p>
-                                <p>Europe Analytica</p>
+                                <p>Gabrielle</p>
+                                <p>Baltic Lab</p>
                                 <p>Administrator</p>
                               </div>
                             </div>

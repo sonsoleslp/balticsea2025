@@ -133,7 +133,7 @@ export const LockScreen = (props) => {
       </div>
       <div className="fadeinScreen" data-faded={!lock} data-unlock={unlocked}>
         <Image className="rounded-full overflow-hidden" src="img/asset/prof.jpg" w={200} ext />
-        <div className="mt-2 text-2xl font-medium text-gray-200">David</div>
+        <div className="mt-2 text-2xl font-medium text-gray-200">Gabrielle</div>
            <input type={passType?"text":"password"} 
            className={"password-input" + (failed ? " shake" : "")}
            value={password} onChange={action}

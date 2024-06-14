@@ -38,8 +38,8 @@ export const AboutWin = (props) => {
         </p>
         <p className="pl-4">
           {props.I18n.getTrans('about.contact')} :&nbsp;
-          <a target="_blank" href="mailto:david@europeanalytica.com" rel="noreferrer">
-            david@europeanalytica.com
+          <a target="_blank" href="mailto:gabrielle@balticlab.com" rel="noreferrer">
+            gabrielle@balticlab.com
           </a>
         </p>
 
