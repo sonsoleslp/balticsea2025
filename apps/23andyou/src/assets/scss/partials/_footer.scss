@@ -1,0 +1,130 @@
+.footer {
+
+    background-color: $white;
+    grid-row: 3/3;
+    display: flex;
+    justify-content: center;
+
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    position: relative;
+
+    .information {
+
+        grid-column: 1/2;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        button.buttoninfo {
+            display: flex;
+
+            svg {
+                width: 1rem;
+                fill: rgba($black, 1);
+
+                &:hover {
+                    fill: rgba($black, $hover-opacity);
+                    transition: all 200ms ease-in;
+                }
+            }
+        }
+    }
+
+    .selection_buttons {
+
+        grid-column: 2/3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button.buttonno {
+            @include button-selection($true);
+            margin-right: 1rem;
+        }
+        button.buttonyes {
+            @include button-selection($false);
+        }
+
+        button.true_selected {
+            @include button-selected($true);
+        }
+        button.false_selected {
+            @include button-selected($false);
+        }
+    }
+
+    .submit {
+        grid-column: 3/3;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        button.buttonsubmit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.buttondisabled {
+                @include button(gray, $white, $hover-opacity);
+                cursor: not-allowed;
+
+                .send_warning {
+                    display: none;
+                    position: absolute;
+                    font-size: .8rem;
+                    bottom: 1rem;
+                    right: 1rem;
+
+                    color: gray;
+
+                }
+
+                &:hover {
+                    .send_warning {
+                        display: block;
+                    }
+                }
+
+            }
+            &.buttonenabled {
+                .send_warning {
+                    display: none;
+                }
+                @include button($false, $white, $hover-opacity);
+
+            }
+            svg {
+                width: 1rem;
+                fill: $white;
+                margin-right: .5rem;
+            }
+        }
+        button.buttondisabled {
+
+        }
+
+    }
+
+}
+
+@media (max-width: 1280px) {
+  .footer {
+      padding: 0 1rem 0 1rem;
+    }
+    .send_warning {
+        width: 130px;
+        bottom: 3.5rem !important;       
+    }
+}
+
+
+@media (max-width: 780px) {
+      .send_warning {
+          width: 130px;
+          bottom: 3rem !important;       
+      }
+  }
