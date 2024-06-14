@@ -178,11 +178,11 @@ function App() {
   },[]);
 
   let showBloc = false;
-  if (apps && apps.notepad) {
+  if (apps && apps.lab) {
     try {
       let toppest = Math.max(...Object.keys(apps).map(e=>apps[e].z).filter(r=>r!==undefined));
-      const extra = JSON.parse(apps.notepad.extra);
-      showBloc = !apps.notepad.hide && (apps.notepad.z >= toppest) && extra.showBloc;
+      const extra = JSON.parse(apps.lab.extra);
+      showBloc = !apps.lab.hide && (apps.lab.z >= toppest) && extra.showBloc;
     } catch(e) {console.error(e)}
   }
   const puzzleSolution = escapp?.getNewestState().puzzleData[GLOBAL_CONFIG.escapp.appPuzzleIds[1]]?.solution;

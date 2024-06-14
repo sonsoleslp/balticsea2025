@@ -18,6 +18,7 @@ export * from './apps/about';
 //export * from './apps/discord';
 export * from './apps/camera';
 export * from './apps/photos';
+export * from './apps/lab';
 
 export const ScreenPreview = ()=>{
   const tasks = useSelector(state=>state.taskbar);

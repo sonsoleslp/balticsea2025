@@ -16,12 +16,13 @@ export let GLOBAL_CONFIG = {
   localStorageKey:"WEB_SWITCHER_2022",
   webs:{
     en:[
-      {name:"BalticSeaBioMed 1", url:"https://vishub.org/ediphy_documents/448.full?nowatermark=1", switchOnPuzzle:0},
-      {name:"BalticSeaBioMed 2", url:"https://vishub.org/ediphy_documents/449.full?nowatermark=1", switchOnPuzzle:1},
-      {name:"BalticSeaBioMed 3", url:"https://vishub.org/ediphy_documents/450.full?nowatermark=1", switchOnPuzzle:2},
-      {name:"BalticSeaBioMed 4", url:"https://vishub.org/ediphy_documents/451.full?nowatermark=1", switchOnPuzzle:3},
-      {name:"BalticSeaBioMed 5", url:"https://vishub.org/ediphy_documents/452.full?nowatermark=1", switchOnPuzzle:4},
-      {name:"BalticSeaBioMed 6", url:"https://vishub.org/ediphy_documents/453.full?nowatermark=1", switchOnPuzzle:5},
+      {name:"BalticSeaBioMed 1", url:"https://vishub.org/ediphy_documents/448.full?nowatermark=1", switchOnPuzzle:0},// Start
+      {name:"BalticSeaBioMed 2", url:"https://vishub.org/ediphy_documents/449.full?nowatermark=1", switchOnPuzzle:1},// 23
+      {name:"BalticSeaBioMed 3", url:"https://vishub.org/ediphy_documents/450.full?nowatermark=1", switchOnPuzzle:2},// Sauna
+      {name:"BalticSeaBioMed 4", url:"https://vishub.org/ediphy_documents/451.full?nowatermark=1", switchOnPuzzle:3},// Plum
+      {name:"BalticSeaBioMed 5", url:"https://vishub.org/ediphy_documents/452.full?nowatermark=1", switchOnPuzzle:4},// Fakenew -> password 
+      {name:"BalticSeaBioMed 6", url:"https://vishub.org/ediphy_documents/453.full?nowatermark=1", switchOnPuzzle:6},// Doctor name
+      {name:"BalticSeaBioMed 6", url:"https://vishub.org/ediphy_documents/454.full?nowatermark=1", switchOnPuzzle:7}// Conversation
     ]
   },
   escapp:{

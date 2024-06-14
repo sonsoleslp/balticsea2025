@@ -186,7 +186,13 @@ const ContentArea = ({searchtxt})=>{
     e.stopPropagation();
     handleFileOpen(e.target.dataset.id);
   }
+  const handleDoubleApp = (e, item)=>{
+     console.log("handleDoubleApp")
+    console.log(e)
+    dispatch({type: item.info?.action, payload: item.info?.payload, extra: JSON.stringify(item.info?.extra)})
 
+    e.stopPropagation();
+  }
   const emptyClick = (e)=>{
     setSelect(null);
   }
@@ -210,18 +216,27 @@ const ContentArea = ({searchtxt})=>{
       } else dispatch(action);
     }
   };
-
   return(
     <div className="contentarea" onClick={emptyClick} onKeyDown={handleKey} tabIndex="-1">
       <div className="contentwrap win11Scroll">
         <div className="gridshow" data-size="lg">
           {fdata.data.map((item,i)=>{
-            // console.log(item)
-            if (item.app != undefined) {
+            
+            if ((item.app != undefined)) {
               return <div key={i} className="dskApp">
               <Icon click={clickDispatch} className="dskIcon prtclk" src={item.icon} payload={item.payload || "full"} extra={item.extra} pr menu="app" />
               <div className="appName">{item.name}</div>
             </div>
+            }
+            console.log(item)
+            if (item.type == "app") {
+
+              return <div key={i} className="conticon hvtheme flex flex-col items-center prtclk"
+                data-id={item.id} data-focus={selected==item.id}
+                onClick={handleClick} onDoubleClick={e=>handleDoubleApp(e,item)}>
+                <Image src={`icon/win/${item.info.icon}`}/>
+                <span>{item.name}</span>
+              </div>
             }
             return item.name.includes(searchtxt) && (
               <div key={i} className="conticon hvtheme flex flex-col items-center prtclk"

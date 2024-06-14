@@ -149,7 +149,22 @@
                   "2024-07-03":{},
                   "2024-07-19":{},
                   "2024-07-24":{},
-                  "2024-08-03":{}
+                  "2024-08-06":{
+                    "type": "folder",
+                    "data":{
+                      "results.spss": {
+                        "name": "results.spss",
+                        "type": "app",
+                        "info": {
+                          "app":  "LAB",
+                          "icon": "docs",
+                          "action": "LAB",
+                          "payload": "mxmz",
+                          "extra":  {"text": "news", "image": "asset/boats.jpg", "showBloc": true}
+                        }
+                      }
+                    }
+                  }
                 }
               },
               "Programs": {}

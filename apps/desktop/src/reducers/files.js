@@ -15,7 +15,7 @@ defState.data.parse(fdata);
 const fileReducer = (state = defState, action) => {
   var tmp = {...state};
   var navHist = false;
-
+  console.log(state,action)
   if (action.type === "FILEDIR") {
     tmp.cdir = action.payload
   }else if (action.type === "FILEPATH") {

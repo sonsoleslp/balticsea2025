@@ -28,7 +28,6 @@ export const Notepad = (props) => {
         </div>
         <div className="restWindow h-full flex-grow">
           <div className="w-full h-full overflow-hidden">
-            <img className="image enableContextMenu" src={"img/"+extra.image} />
             <textarea className="noteText win11Scroll" id="textpad" defaultValue={extra.text ? props.I18n.getTrans(extra.text) : ""} disabled={extra.text}/>
           </div>
         </div>

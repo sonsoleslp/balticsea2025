@@ -48,13 +48,13 @@ var apps = [{
   action: 'PHOTOS',
   extra: 'asset/boats.jpg'
 },*/
-// {
-//   name: 'tweet.doc',
-//   icon: 'notepad',
-//   type: 'app',
-//   action: 'NOTEPAD',
-//   extra: JSON.stringify({text: "news", image: 'asset/boats.jpg', showBloc: true})
-// },
+/*{
+  name: 'tweet.doc',
+  icon: 'notepad',
+  type: 'app',
+  action: 'NOTEPAD',
+  extra: JSON.stringify({text: "news", image: 'asset/boats.jpg', showBloc: true})
+},*/
 {
   name: 'Store',
   icon: 'store',
@@ -136,6 +136,12 @@ var apps = [{
   name: 'News',
   icon: 'news',
   type: 'app'
+},
+{
+  name: 'Lab',
+  icon: 'lab',
+  type: 'app',
+  action: 'LAB'
 },
 {
   name: 'Notepad',
