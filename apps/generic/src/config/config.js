@@ -20,7 +20,7 @@ export let GLOBAL_CONFIG = {
   restoreState:"AUTO",
   escapp:{
     //endpoint:"https://escapp.dit.upm.es/api/escapeRooms/306",
-    localStorageKey: searchParams.has('puzzleId') ? "escapp_generic" : ("escapp_generic" + searchParams.get('puzzleId')),
+    localStorageKey: searchParams.has('puzzleId') ?  ("escapp_generic" + searchParams.get('puzzleId')) : "escapp_generic",
     imagesPath:"assets/images/",
     I18n:{
       availableLocales:["en"],
