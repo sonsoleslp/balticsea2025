@@ -8,6 +8,10 @@ let ESCAPP_LOCALES = {
 };
 
 
+const searchParams = new URL(document.location).searchParams;
+
+   
+
 export let GLOBAL_CONFIG = {
   availableLocales:[  "en" ],
   defaultLocale:"es",
@@ -16,7 +20,7 @@ export let GLOBAL_CONFIG = {
   restoreState:"AUTO",
   escapp:{
     //endpoint:"https://escapp.dit.upm.es/api/escapeRooms/306",
-    localStorageKey:"escapp_generic",
+    localStorageKey: searchParams.has('puzzleId') ? "escapp_generic" : ("escapp_generic" + searchParams.get('puzzleId')),
     imagesPath:"assets/images/",
     I18n:{
       availableLocales:["en"],
