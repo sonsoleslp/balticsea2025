@@ -1,0 +1,99 @@
+@import 'lib/mixins';
+@import 'lib/vars';
+
+@import 'partials/header';
+@import 'partials/content';
+@import 'partials/footer';
+@import 'partials/modal';
+
+html, body {
+  margin:0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: $font-family-base;
+  font-size: $font-base;
+  //overflow:hidden;
+}
+
+html {
+
+      width: 100%;
+    height: 100%;
+}
+
+#root {
+   height: 100%;
+}
+
+
+
+.Door {
+  background: url("../images/door2.jpg") no-repeat center center;
+  background-color: #c8b197;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+   align-items: end;
+  height: 100%;
+}
+
+
+
+.App {
+  background: url("../images/doctorsoffice.png") no-repeat center center;
+  background-color: #c8b197;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+   align-items: end;
+  height: 100%;
+}
+
+h1 {
+  margin-bottom: 1.2em;
+  font-size: 2em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.questions li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid white;
+  text-align: left;
+  font-size: 1.3em;
+
+}
+
+.questions li:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+
+.questions {
+  flex: 1;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  height: max-content;
+}
+
+
+.exit{
+  background-color: white;
+  padding: 1em;
+  border-radius: 0.5em;
+  font-size: 1.3em;
+  cursor: pointer;
+}
