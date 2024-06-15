@@ -67,7 +67,6 @@ export default function App() {
     escapp.checkPuzzle(GLOBAL_CONFIG.escapp.appPuzzleIds[0], lettersol, {}, function(success){
       if(success){
         setPassed(true);
-         
       } else {
         setPassed(false);
        // setShowModalEnd(true);
@@ -79,8 +78,6 @@ export default function App() {
     const lettersol = history.reduce((a,b)=>a+abc[b],"")
     escapp.submitPuzzle(GLOBAL_CONFIG.escapp.appPuzzleIds[0], lettersol, {}, function(success){
       if(success){
-         
-         
       } else {
         resetHistory();
       }
@@ -88,7 +85,7 @@ export default function App() {
   }
 
 
-  onExit = ()=> {
+  const onExit = ()=> {
     submit();
   }
 
