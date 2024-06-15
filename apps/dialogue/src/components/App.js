@@ -15,16 +15,14 @@ export default function App() {
   const [currentQuestion, setCurrentQuestion] = useState(sequence);
   const [history, setHistory] = useState([]);
   const [passed, setPassed] = useState(undefined);
-  const [door, setDoor] = useState(false);
+  const [door, setDoor] = useState(true);
 
   const handleAnswerClick = (nextQuestion,index) => {
     setCurrentQuestion(nextQuestion);
     const newHist = [...history,index];
     setHistory(newHist);
-    console.log(nextQuestion)
     if(!nextQuestion.answers || nextQuestion.answers.length == 0) {
-      console.log("fsd")
-      submit(newHist)
+      check(newHist)
     }
   };
 
@@ -64,13 +62,9 @@ export default function App() {
     }
   }
 
-  
-
-  const submit = (solution) => {
-    console.log(solution)
+  const check = (solution) => {
     const lettersol = solution.reduce((a,b)=>a+abc[b],"")
-    console.log(lettersol)
-    escapp.submitPuzzle(GLOBAL_CONFIG.escapp.appPuzzleIds[0], lettersol, {}, function(success){
+    escapp.checkPuzzle(GLOBAL_CONFIG.escapp.appPuzzleIds[0], lettersol, {}, function(success){
       if(success){
         setPassed(true);
          
@@ -79,16 +73,29 @@ export default function App() {
        // setShowModalEnd(true);
       }
     });
+  }  
+
+  const submit = () => {
+    const lettersol = history.reduce((a,b)=>a+abc[b],"")
+    escapp.submitPuzzle(GLOBAL_CONFIG.escapp.appPuzzleIds[0], lettersol, {}, function(success){
+      if(success){
+         
+         
+      } else {
+        resetHistory();
+      }
+    });
   }
 
 
-
+  onExit = ()=> {
+    submit();
+  }
 
   if(loading){
     return <div>LOADING</div> ;
   } else if(door) {
     return <div className="Door" onClick={()=>setDoor(false)}>
-    sdfsdfs
     </div>
   } else {
     return (
@@ -103,7 +110,8 @@ export default function App() {
             ))}
           </ul>
           <div>{passed ? "Congrats":""}</div>
-          <div>{passed === false ? <Exit onExit={resetHistory}/>:""}</div>
+          <div>{passed === false ? <Exit onExit={onExit} text={"Return to the corridor"}/>:""}</div>
+          <div>{passed === true ? <Exit onExit={onExit} text={"Continue"}/>:""}</div>
         </div>
         </div>
       );

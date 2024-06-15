@@ -22,7 +22,8 @@ export let GLOBAL_CONFIG = {
       {name:"BalticSeaBioMed 4", url:"https://vishub.org/ediphy_documents/451.full?nowatermark=1", switchOnPuzzle:3},// Plum
       {name:"BalticSeaBioMed 5", url:"https://vishub.org/ediphy_documents/452.full?nowatermark=1", switchOnPuzzle:4},// Fakenew -> password 
       {name:"BalticSeaBioMed 6", url:"https://vishub.org/ediphy_documents/453.full?nowatermark=1", switchOnPuzzle:6},// Doctor name
-      {name:"BalticSeaBioMed 6", url:"https://vishub.org/ediphy_documents/454.full?nowatermark=1", switchOnPuzzle:7}// Conversation
+      {name:"BalticSeaBioMed 7", url:"https://vishub.org/ediphy_documents/454.full?nowatermark=1", switchOnPuzzle:7},// Conversation
+      {name:"BalticSeaBioMed 8", url:"https://vishub.org/ediphy_documents/455.full?nowatermark=1", switchOnPuzzle:8} // Finale
     ]
   },
   escapp:{

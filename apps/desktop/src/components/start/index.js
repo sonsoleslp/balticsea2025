@@ -57,7 +57,7 @@ export const DesktopApp = (props) => {
             </div>
           );
         })}
-        <MailNotification show={showNotification} I18n={props.I18n}/>
+        
     </div>
   );
 };
