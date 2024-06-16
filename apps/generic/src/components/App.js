@@ -90,6 +90,6 @@ export default function App() {
  
 
   
-    return <div id="theclickable" style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0, backgroundColor: "transparent"}} onClick={submit}></div>
+    return <div id="theclickable" style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0, backgroundColor: "transparent", cursor: "pointer"}} onClick={submit}></div>
   
 }
