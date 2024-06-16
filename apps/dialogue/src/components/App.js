@@ -106,7 +106,6 @@ export default function App() {
               </li>
             ))}
           </ul>
-          <div>{passed ? "Congrats":""}</div>
           <div>{passed === false ? <Exit onExit={onExit} text={"Return to the corridor"}/>:""}</div>
           <div>{passed === true ? <Exit onExit={onExit} text={"Continue"}/>:""}</div>
         </div>

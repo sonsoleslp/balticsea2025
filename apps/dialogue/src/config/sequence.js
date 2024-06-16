@@ -19,7 +19,7 @@ export let sequence = {
 				},
 				{
 					question: "“I see. How was Bob exposed to cyanide then?", 
-					answer:"Even tiny amounts of cyanide could be lethal for Bob as he carries a rare GST polymorphism that is associated with cyanide metabolism!” (discovered article in lab linking GST with cyanide + Bob’s genetic test results) ", 
+					answer:"Even tiny amounts of cyanide could be lethal for Bob as he carries a rare GST polymorphism that is associated with cyanide metabolism!", 
 					answers: [
 						{	
 							answer:"It’s the cyanobacteria in Baltic Sea! He got exposed while swimming",
@@ -63,7 +63,7 @@ export let sequence = {
 		},
 		{
 			answer:"I know what’s wrong with Bob! It’s the fish he ate!",	
-			question: "An acute food poisoning? Interesting, was he the only person eating the fish?”", 
+			question: "An acute food poisoning? Interesting, was he the only person eating the fish?", 
 			answers: [
 				{
 					answer:"No, we all had fish.",

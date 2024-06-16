@@ -82,8 +82,6 @@ export default function App() {
     const puzId = GLOBAL_CONFIG.escapp.appPuzzleIds[0];
     escapp.submitPuzzle(puzId, solution, {}, function(success){
        
-      console.log(success)
-      console.log(solution)
     });
   }
  
@@ -91,7 +89,7 @@ export default function App() {
   
     return <div className="container">
         <div className="header">
-            <h1>23andMe Test Results</h1>
+            <h1>23andYou Test Results</h1>
         </div>
 
         <div className="section">
