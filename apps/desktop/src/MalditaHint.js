@@ -6,7 +6,7 @@ function MalditaHint(props) {
   const { I18n, puzzleCompleted, show } = props;
   
   return <div className={"malditaHint" + ((show && !puzzleCompleted) ? " show" : "")} >
-  		<p>{I18n.getTrans("hint")} <a target="_blank" href={I18n.getTrans("hint_link")} rel="noreferrer">{I18n.getTrans("hint_maldita")}</a></p>
+  		<p>{I18n.getTrans("hint")}</p>
     </div>;
 }
 export default MalditaHint;
