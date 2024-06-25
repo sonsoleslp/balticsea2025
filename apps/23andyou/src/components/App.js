@@ -50,7 +50,7 @@ export default function App() {
   const submit = (solution) => {
     const puzId = GLOBAL_CONFIG.escapp.appPuzzleIds[0];
     escapp.submitPuzzle(puzId, solution, {}, function(success){
-       
+       setPassed(success);
     });
   }
   const puzzleSolution = escapp?.getNewestState().puzzleData[GLOBAL_CONFIG.escapp.appPuzzleIds[1]]?.solution;
@@ -60,7 +60,7 @@ export default function App() {
     <div className="App">
 
         <h1 className="maintitle"> 
-          Genetic screening <img className="logo" src="../assets/images/ur46.png"/> 
+          Genetic screening <img className="logo" src="./assets/images/ur46.png"/> 
         </h1>
         <div><p>Hi, Robert Devii. Are you ready to know what your genes unveil about yourself?</p></div>
 

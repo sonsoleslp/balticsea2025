@@ -38,7 +38,7 @@ function Bloc(props) {
 
   return <div className={"bloc" + (props.show ? " show" : "")} >
   		<div>	
-		    <img src="../assets/images/notebook.svg"/>
+		    <img src="./assets/images/notebook.svg"/>
 		    <div className="bloc_content">
 			    <p>Is there any indicator that could make Bob more sensitive to cyanide?</p>
 			    {puzzleCompleted ? <p>{puzzleSolution}</p> : null}
