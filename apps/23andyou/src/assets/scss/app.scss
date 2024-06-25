@@ -18,15 +18,9 @@ html {
 }
 
 .App {
-  //height: 100vh;
   overflow: scroll;
   padding: 5vh 10vw;
   border-radius: .25rem;
-  display: grid;
-  justify-content: stretch;
-  align-content: stretch;
-  grid-template-rows: 15% 70% 15%;
-  height: 90vh;
 
 }
 
@@ -37,20 +31,10 @@ button {
   cursor: pointer;
 }
 
-
-@media (max-width: 1280px) {
-  .App {
-      grid-template-rows: 12% 78% 10%;
-    }
-}
+ 
 
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
+     
         .container {
             width: 80%;
             margin: 0 auto;
@@ -317,3 +301,276 @@ button {
             opacity: 1;
           }
         }
+/* src/components/RiskTable.css */
+
+.risk-table {
+  font-family: Arial, sans-serif;
+}
+
+.risk-table h2 {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.risk-table button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.risk-table button:focus {
+  outline: none;
+}
+
+.risk-table button:hover {
+  background-color: #0056b3;
+}
+
+.risk-table button.sort-ascending::after {
+  content: ' ↑';
+}
+
+.risk-table button.sort-descending::after {
+  content: ' ↓';
+}
+
+/* Additional styling for buttons */
+.risk-table .active-sort {
+  font-weight: bold;
+}
+
+/* Style for the accordions */
+.accordion {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 10px 
+ }
+
+.accordion-header {
+  background: #f7f7f7;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  user-select: none;
+}
+
+.accordion-header h3 {
+  margin: 0;
+}
+
+.accordion-icon {
+  font-size: 1.5em;
+}
+
+.accordion-content {
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+/* src/App.css */
+
+.App {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.MuiAccordion-root {
+  margin: 10px 0;
+}
+
+.logo {
+  float:right;
+  width: 180px;
+
+}
+
+
+.maintitle {
+
+  margin: 0 !important;
+}
+
+
+
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table-container th,
+.table-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table-container tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-container tr:hover {
+  background-color: #f1f1f1;
+}
+
+.meta-analysis {
+  color: #2a9df4;
+  font-weight: bold;
+}
+
+.subheader {
+  background-color: #e9ecef;
+  font-weight: bold;
+}
+
+
+
+.bloc {
+    position: fixed;
+    z-index: 10000;
+    bottom: 0%;
+    right: 0%;
+    display: block;
+    width: 35%; 
+    font-family: "Reenie Beanie", mono;
+    transition: bottom 0.4s;
+    .bloc_content {
+      position: absolute;
+      width: 60%;
+      top: 20%;
+      left: 20%;
+      font-size: 1.8em;
+      font-size: 2.2vw;
+    }
+    &.show {
+      bottom: -10%;
+      visibility: visible;
+    }
+
+    input#bloc_input {
+      background: transparent;
+      font-size: 2.5em;
+      font-size: 2.3vw;
+      display: block;
+      font-family: inherit;
+      font-size: inherit;
+      margin-top: 11%;
+      border: none; /* Removes the default border */
+      &:focus {
+          outline: none;
+        }
+        line-height: 110%;
+        padding: 0;
+
+        &::placeholder {
+          color: #777;
+        }
+
+    }
+    p.danger {
+      color: tomato;
+      font-family: monospace;
+      font-size: 1em;
+      font-size: 1.2vw;
+    }
+
+    p.success {
+      color: #3ECA6B;
+      font-family: monospace;
+      font-size: 1em;
+      font-size: 1.2vw;
+      
+    }
+
+    .continue {
+      background: black;
+      border: none;
+      padding: .2em .5em;
+      color: white;
+      font-family: inherit;
+      font-size: 0.8em;
+      cursor: pointer;
+
+    }  
+  }
+
+.malditaHint {
+  background: rgba(255,10,20,0.85);
+  line-height: 1.2;
+  padding: 0.4em .8em;
+  position: fixed;
+  z-index: 10000;
+  bottom: 60px;
+  left: 20px;
+  display: none;
+  color: black;
+  font-size: 0.88em;
+  width: 50%;
+  &.show {
+    display: inline-block;
+  }
+
+   a {
+    color: black !important;
+    font-weight: 700;
+  }
+
+}
+
+
+.ancestry-results  {
+  margin: 20px auto;
+  width: 50%;
+  max-width:400px;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+}
+
+.ancestry-title {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.ancestry-details {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-top: none;
+  margin-bottom: 10px;
+  background-color: #e9ecef;
+  border-radius: 0 0 5px 5px;
+}
+
+#bloc_input {
+  height: 2em;
+  background: transparent;
+  border: 2px solid black;
+  font-family: inherit;
+  font-size: .6em;
+}
