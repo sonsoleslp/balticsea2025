@@ -1,3 +1,4 @@
+import React from 'react';
 // let ESCAPP_LOCALES = {
 //   es:{
 //     "i.auth_text":"Introduce las credenciales (correo 'usuario@alumnos.upm.es' y contraseña) de tu usuario en la plataforma Escapp. Para que esta autenticación tenga éxito, previamente debes de haberte inscrito con tu usuario a la escape room en la plataforma Escapp.",
