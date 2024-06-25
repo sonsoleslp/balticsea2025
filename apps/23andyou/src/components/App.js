@@ -26,7 +26,6 @@ export default function App() {
     //reset(); //For development
     //pedir login del usuario:
     escapp.validate((success, er_state) => {
-      console.log(success,er_state)
       if(success){
         restoreState(er_state);
       }
@@ -61,7 +60,7 @@ export default function App() {
     <div className="App">
 
         <h1 className="maintitle"> 
-          Genetic screening <img className="logo" src="assets/images/ur46.png"/> 
+          Genetic screening <img className="logo" src="../assets/images/ur46.png"/> 
         </h1>
         <div><p>Hi, Robert Devii. Are you ready to know what your genes unveil about yourself?</p></div>
 
