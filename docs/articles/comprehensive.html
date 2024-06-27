@@ -431,6 +431,22 @@
     <p><a href="file:///Users/slopezpe/Work/balticsea/docs/articles/comprehesive.html" target="_new">https://doi.org/10.1136/jmedgenet-2018-105429</a></p>
   </div>
 
+  <script>
+  function highlightText(searchString) {
+    const content = document.body.innerHTML;
+
+    if (searchString.trim() !== "") {
+        const highlightedContent = content.replace(new RegExp(searchString, 'gi'), (match) => {
+            return `<span class="highlight">${match}</span>`;
+        });
+        document.body.innerHTML = highlightedContent;
+    }
+  }
+  document.body.onload = function() {
+    highlightText("The revealed pattern of pharmacogenetic variability in Ashkenazi Jews is distinctly different from other populations and is expected to translate into unique functional consequences, especially for the metabolism of CYP2A6, CYP2C9, NAT2 and VKORC1 substrates. We anticipate that the presented data will serve as a powerful resource for the guidance of pharmacogenetic treatment decisions and the optimisation of population-specific genotyping strategies in the Ashkenazi diaspora.")
+    
+  }
   
+</script>
   </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></section></div></body></html>
