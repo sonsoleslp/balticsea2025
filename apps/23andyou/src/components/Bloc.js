@@ -2,24 +2,34 @@ import React, {useState, useEffect} from 'react';
 
 function Bloc(props) {
  
-  const [text, setText] = useState("");
+  const [text1, setText1] = useState("");
+  const [text2, setText2] = useState("");
   const [escappFailMessage, setEscappFailMessage] = useState(undefined);
   const [escappSuccessMessage, setEscappSuccessMessage] = useState(undefined);
   const { checkPlace, puzzleSolution, puzzleCompleted } = props;
   const handleKeyUp = (e) => {
   	if(e.keyCode == 13){
-      textSolve((text || "").toString());
+      textSolve(buildText());
     }
   }
-  const handleWrite = (e) => {
-    setText(e.target.value);
+  const buildText = () => {
+    return (text1 || "").toString() + "_" + (text2 || "").toString();
+  }
+  const handleWrite1 = (e) => {
+    setText1(e.target.value);
     if(escappFailMessage != undefined) {
     	setEscappFailMessage(undefined);
+    }
+  }  
+  const handleWrite2 = (e) => {
+    setText2(e.target.value);
+    if(escappFailMessage != undefined) {
+      setEscappFailMessage(undefined);
     }
   }
 
   const textSolve = (text) => {
-  	checkPlace(text, (success) => {
+  	checkPlace(buildText(), (success) => {
   		if (success) {
   			setEscappSuccessMessage(true);
   			// to-do
@@ -32,7 +42,7 @@ function Bloc(props) {
   }
 
   const onContinue = e => {
-    textSolve((text || "").toString());
+    textSolve(buildText());
   }
 
 
@@ -42,11 +52,16 @@ function Bloc(props) {
 		    <div className="bloc_content">
 			    <p>Is there any indicator that could make Bob more sensitive to cyanide?</p>
 			    {puzzleCompleted ? <p>{puzzleSolution}</p> : null}
-			    <p>{puzzleCompleted ? null : <select  id="bloc_input" autoFocus
-			      onChange={handleWrite}
-            defaultValue={props.dropdown[0]}  >
-              {props.dropdown.map((p,i)=><option key={"option_"+i} selected={i} value={p}>{p}</option>)}
-            </select>}</p>
+           <p>{puzzleCompleted ? null : <div>Ancestry:  <select  id="bloc_input" autoFocus
+            onChange={handleWrite1}  defaultValue={""}>
+            <option key={"option"}>{"None"}</option>
+              {props.dropdown1.map((p,i)=><option key={"option_"+i}  value={p}>{p}</option>)}
+            </select></div>}</p>
+			    <p>{puzzleCompleted ? null : <div>Genes:  <select  id="bloc_input" autoFocus
+            onChange={handleWrite2}  defaultValue={""}>
+            <option key={"option"}>{"None"}</option>
+              {props.dropdown2.map((p,i)=><option key={"option_"+i}  value={p}>{p}</option>)}
+            </select></div>}</p>
 			    {puzzleCompleted ? null : <p><button className="continue" onClick={onContinue}>Confirm</button></p>}
 			    {escappFailMessage ? <p className="danger">It does not seem related</p> : null}
 			    {escappSuccessMessage ? <p className="success">Great!</p> : null}

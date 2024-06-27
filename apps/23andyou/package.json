@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "copy_assets": "cross-env cp -r public/assets/ dist/ && cross-env cp -r public/vendors dist/vendors",
+    "copy_assets": "cross-env cp -r public/assets/ dist/assets && cross-env cp -r public/vendors dist/vendors",
     "publish_app": "rm -rf ../../docs/23andyou && cp -r dist ../../docs/23andyou"
   },
   "eslintConfig": {

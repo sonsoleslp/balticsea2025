@@ -55,7 +55,8 @@ export default function App() {
   }
   const puzzleSolution = escapp?.getNewestState().puzzleData[GLOBAL_CONFIG.escapp.appPuzzleIds[1]]?.solution;
   const puzzleCompleted = escapp?.getNewestState().puzzlesSolved.indexOf(GLOBAL_CONFIG.escapp.appPuzzleIds[1]) != -1;
-  const drop = (GLOBAL_CONFIG.riskData.elevatedRisk.map(a=>a.name)).concat((GLOBAL_CONFIG.riskData.decreasedRisk.map(a=>a.name)))
+  const drop1 = GLOBAL_CONFIG.ancestryData.map(a=>a.region)
+  const drop2 = (GLOBAL_CONFIG.riskData.elevatedRisk.map(a=>a.name)).concat((GLOBAL_CONFIG.riskData.decreasedRisk.map(a=>a.name)))
   return (
     <div className="App">
 
@@ -64,7 +65,7 @@ export default function App() {
         </h1>
         <div><p>Hi, Robert Devii. Are you ready to know what your genes unveil about yourself?</p></div>
 
-      <Bloc checkPlace={submit} puzzleSolution={puzzleSolution} puzzleCompleted={puzzleCompleted} dropdown={drop}/>
+      <Bloc checkPlace={submit} puzzleSolution={puzzleSolution} puzzleCompleted={puzzleCompleted} dropdown1={drop1} dropdown2={drop2}/>
       <AncestryResults />
       <RiskTable />
     </div>
