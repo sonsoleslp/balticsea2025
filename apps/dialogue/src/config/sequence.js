@@ -26,8 +26,26 @@ export let sequence = {
 							question: "“I'm afraid you are mistaken. Blue algae do not contain cyanide. Please let me work in peace unless you come up with a better idea"
 						},
 						{	
-							answer:"It's the cyanide in plum seeds! He got exposed when eating plum jam!",
-							question: "Is that possible? Let me check .... You are right! Plum seed together with Bob's GST polymorphism are the answer! We are just working on an experimental cure for cyanide poisoning and have our first batch of antidote ready!"
+							answer:"It's the cyanide in plum seeds! He got exposed when eating plum seeds!",
+							question: "Is that possible? Let me check .... You are right! Plum seeds eaten in a big dose could potentially cause cyanide poisoning. But are you sure Bob has GST polymporphism... that's very rare", 
+							answers: [
+								{
+									question: "Alright...Please make sure of what you are saying!", 
+									answer:"I don't know. He just has it..."
+								},
+								{
+									question: "You are right! We are just working on an experimental cure for cyanide poisoning and have our first batch of antidote ready!", 
+									answer:"Bob has Ashkenazi jew ancestry, where such polymorphism is common, according to recent literature"
+								},
+								{
+									question: "I'm afraid you are mistaken. Insecticides for people do not have cyanide nowadays. Please let me work in peace unless you come up with a better idea", 
+									answer:"The seeds cyanide dose might have been combined with the cyanide in the insecticide"
+								},
+								{
+									question: "Didn't he get his genetic test results before eating the seeds? Please let me work in peace unless you come up with a better idea", 
+									answer:"Maybe the polymporphism was caused by the seeds?", 
+								}
+							]
 						},
 						{	
 							answer:"It's the cyanobacteria in Baltic Sea! He was throwing sea water to stones in sauna!",
