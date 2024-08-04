@@ -127,7 +127,7 @@ export default function App() {
   } else {
     return <>
       <ModalStart showModal={showModalStart} closeModal={closeModalStart} I18n={I18n}/>
-      <ModalEnd showModal={showModalEnd} closeModal={closeModalEnd} I18n={I18n} passed={passed}/>
+      <ModalEnd showModal={showModalEnd} closeModal={closeModalEnd} I18n={I18n} passed={passed} news={news}/>
       <MainScreen passed={passed} news={news} newsIndex={newsIndex} openModalStart={openModalStart} openModalEnd={openModalEnd} left={left} right={right} isfalse={isfalse} istrue={istrue} submit={submit} I18n={I18n}/>
     </>;
   }

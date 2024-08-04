@@ -7,7 +7,7 @@ export let NEWSen = [
   },
   { "iframe":true,
     "path": "https://sonsoles.me/balticsea2024/articles/gstm.html",    
-    "true_or_false": false,
+    "true_or_false": true,
     "feedback": ""
   },
   { "iframe":true,

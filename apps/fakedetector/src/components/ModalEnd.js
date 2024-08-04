@@ -18,12 +18,14 @@ export default function ModalEnd(props) {
       }
     }
 
+    const correct = (props.news.filter((n, i)=>n.answer == props.news[i].true_or_false)).length;
+
     return (
       <Modal  className="modal_content" isOpen={props.showModal} onRequestClose={localCloseModal} style={customStyles} >
 
         <div className="modal_info">
           <h2>{props.I18n.getTrans("i.modalheader2")}</h2>
-          <p>{props.passed ? props.I18n.getTrans("i.congrats") + props.I18n.getTrans("i.congrats2"):props.I18n.getTrans("i.retry")}</p>
+          <p>{props.passed ? (props.I18n.getTrans("i.congrats") + props.I18n.getTrans("i.congrats2")) : (props.I18n.getTrans("i.retry") + " (" + correct + "/" + props.news.length + " correct). " + props.I18n.getTrans("i.retry2"))} </p>
         </div>
 
           {!props.passed ?<div className="close_modal" onClick={props.closeModal}>
