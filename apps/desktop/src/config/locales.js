@@ -33,7 +33,7 @@ export let LOCALES = {
     "right_solution":"Well done!",
     "new_email": "New e-mail received",
     "news": "Two Australian warships blocked a boat loaded with illegal immigrants that did not respond to requests for a halt in their waters. \n\nThe illegal immingrants were all returned back, the crew members were arrested and the boat was dismantled for scrap.\n\nWhy can't the UK do this?",
-    "hint": "Let's check the results of the analysis of the water sample and see if there was cyanide or not",
+    "hint": "Let's see the results of the analysis of the sea water samples! What was the cyanide concentration? I must write it down in my notebook",
     "hint_maldita": "reverse image search",
     "hint_link": "https://images.google.com/",
     "currentDate": "October 29th",

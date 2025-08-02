@@ -122,35 +122,13 @@
                 "type": "folder",
                 "name": "Test Results",
                 "data": {
-                  "2024-02-12":{},
-                  "2024-02-13":{},
-                  "2024-02-14":{},
-                  "2024-02-16":{},
-                  "2024-02-19":{},
-                  "2024-02-22":{},
-                  "2024-02-29":{},
-                  "2024-03-02":{},
-                  "2024-03-12":{},
-                  "2024-03-15":{},
-                  "2024-03-26":{},
-                  "2024-04-04":{},
-                  "2024-04-07":{},
-                  "2024-04-14":{},
-                  "2024-04-24":{},
-                  "2024-05-05":{},
-                  "2024-05-07":{},
-                  "2024-05-09":{},
-                  "2024-05-13":{},
-                  "2024-05-23":{},
-                  "2024-05-29":{},
-                  "2024-06-11":{},
-                  "2024-06-19":{},
-                  "2024-06-30":{},
-                  "2024-07-03":{},
-                  "2024-07-19":{},
-                  "2024-07-24":{},
-                  "2024-08-06":{
-                    "type": "folder",
+                  "Turku-Seili (Spring)": {},
+                  "Seili-Nauvo (Spring)": {},
+                  "Lavarn-Åvensor (Spring)": {},
+                  "Turku-Naantali (Spring)": {},
+                  "Houtsala-Nauvo (Spring)": {},
+                  "Turku-Seili (Summer)": {
+                     "type": "folder",
                     "data":{
                       "results.spss": {
                         "name": "results.spss",
@@ -164,7 +142,16 @@
                         }
                       }
                     }
-                  }
+                  },
+                  "Seili-Nauvo (Summer)": {},
+                  "Lavarn-Åvensor (Summer)": {},
+                  "Turku-Naantali (Summer)": {},
+                  "Houtsala-Nauvo (Summer)": {},
+                  "Turku-Seili (Autumn)": {},
+                  "Seili-Nauvo (Autumn)": {},
+                  "Lavarn-Åvensor (Autumn)": {},
+                  "Turku-Naantali (Autumn)": {},
+                  "Houtsala-Nauvo (Autumn)": {}
                 }
               },
               "Programs": {}

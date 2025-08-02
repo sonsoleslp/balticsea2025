@@ -23,6 +23,7 @@ export let GLOBAL_CONFIG = {
     appPuzzleIds:[6,7],
     notifications:false,
     rtc:true,
-    forceValidation:process.env.NODE_ENV=="production",
+    forceValidation2:process.env.NODE_ENV=="production",
+    forceValidation: false
   },
 };

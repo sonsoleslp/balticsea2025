@@ -365,15 +365,15 @@ body[data-theme="dark"] .win11Scroll,
     right: 0%;
     display: block;
     width: 45%; 
-    font-family: "Reenie Beanie", mono;
+    font-family: "Cambria", mono;
     visibility: hidden;
     transition: bottom 0.4s;
     .bloc_content {
       position: absolute;
-      width: 60%;
+      width: 50%;
       top: 20%;
       left: 20%;
-      font-size: 1.8em;
+      font-size: 1.5em;
       font-size: 2.2vw;
     }
     &.show {
@@ -383,12 +383,11 @@ body[data-theme="dark"] .win11Scroll,
 
     input#bloc_input {
       background: transparent;
-      font-size: 2.5em;
+      font-size: 2em;
       font-size: 2.3vw;
       display: block;
       font-family: inherit;
       font-size: inherit;
-      margin-top: 11%;
       border: none; /* Removes the default border */
       &:focus {
           outline: none;
