@@ -1,50 +1,50 @@
 
 export let NEWSen = [
   { "iframe":true,
-    "path": "https://sonsoles.me/balticsea2024/articles/cyp.html",    
+    "path": "https://sonsoles.me/balticsea2025/articles/cyp.html",    
     "true_or_false": false,
     "feedback": ""
   },
   { "iframe":true,
-    "path": "https://sonsoles.me/balticsea2024/articles/thiosulfate.html",    
+    "path": "https://sonsoles.me/balticsea2025/articles/thiosulfate.html",    
     "true_or_false": true,
     "feedback": ""
   },
   { "iframe":true,
-    "path": "https://sonsoles.me/balticsea2024/articles/poly.html",    
+    "path": "https://sonsoles.me/balticsea2025/articles/poly.html",    
     "true_or_false": true,
     "feedback": ""
   },
   { "iframe":true,
-    "path": "https://sonsoles.me/balticsea2024/articles/plants.html",    
+    "path": "https://sonsoles.me/balticsea2025/articles/plants.html",    
     "true_or_false": true,
     "feedback": ""
   },
   { "iframe":true,
-    "path": "https://sonsoles.me/balticsea2024/articles/almonds.html",    
+    "path": "https://sonsoles.me/balticsea2025/articles/almonds.html",    
     "true_or_false": true,
     "feedback": ""
   },
   { "iframe":true,
-    "path": "https://sonsoles.me/balticsea2024/articles/maternal.html",    
+    "path": "https://sonsoles.me/balticsea2025/articles/maternal.html",    
     "true_or_false": false,
     "feedback": ""
   },
   {
     "iframe":true,
-    "path": "https://sonsoles.me/balticsea2024/articles/rhodanese.html",    
+    "path": "https://sonsoles.me/balticsea2025/articles/rhodanese.html",    
     "true_or_false": true,
     "feedback": ""
   },
   {
     "iframe":true,
-    "path": "https://sonsoles.me/balticsea2024/articles/cytochrome.html",    
+    "path": "https://sonsoles.me/balticsea2025/articles/cytochrome.html",    
     "true_or_false": true,
     "feedback": ""
   },
   {
     "iframe":true,
-    "path": "https://sonsoles.me/balticsea2024/articles/blood.html",    
+    "path": "https://sonsoles.me/balticsea2025/articles/blood.html",    
     "true_or_false": true,
     "feedback": ""
   }
