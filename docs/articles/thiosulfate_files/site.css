@@ -1,0 +1,333 @@
+/*---------------------------------------------------------------------------*/
+
+/*
+
+    Module:         site.css
+
+    Author:         Francois Schiettecatte (FS Consulting, LLC.)
+
+    Creation Date:  August 17, 2015
+
+    Purpose:        This is the CSS for the site.
+
+*/
+
+/*---------------------------------------------------------------------------*/
+
+
+/*
+** Bootstrap overrides
+** https://getbootstrap.com
+*/
+
+
+html {
+
+    /*
+    ** For the flush footer
+    ** https://stackoverflow.com/questions/21324395/bootstrap-3-flush-footer-to-bottom-not-fixed
+    */
+    position: relative;
+    min-height: 100%;
+
+}
+
+
+body {
+
+    /*
+    ** Padding for header and footer
+    ** https://getbootstrap.com/components/#navbar-fixed-top
+    ** https://getbootstrap.com/components/#navbar-fixed-bottom
+    ** https://getbootstrap.com/components/#body-padding-required
+    */
+    padding-top: 50px;
+    padding-bottom: 100px;   /* Set 'padding-bottom' to the height of the flush footer (see .mim-footer) */
+
+    /*
+    ** Font overrides
+    */
+    font-family: 'Lucida Sans', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Gill Sans', 'Arial', 'Verdana', 'Geneva', 'sans-serif';
+    color: black;
+}
+
+
+a {
+    color: #0C2EBB;
+    text-decoration: none;
+}
+
+
+/* https://coderwall.com/p/wpjw4w/change-the-bootstrap-navbar-breakpoint */
+@media (max-width: 900px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+
+/*
+::selection {
+    background: #D4EAC9
+}
+ */
+
+
+/*---------------------------------------------------------------------------*/
+
+
+/*
+** MIM specifics
+*/
+
+
+/*
+** Search div, make the background white so we hide the scrolling text
+*/
+#mimSearch {
+    padding-top: 20px;
+    background: white;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #97CE80;
+    /* box-shadow: 0px 1px 2px #97CE80; */
+}
+
+
+/*
+** MIM fonts
+*/
+.mim-font {
+    font-family: 'Palatino Linotype', 'Palatino', 'Georgia', 'Times New Roman', 'Times', 'serif';
+}
+
+.mim-result-font {
+    font-family: 'Palatino Linotype', 'Palatino', 'Georgia', 'Times New Roman', 'Times', 'serif';
+    font-size: 18px;
+    color: #1A0DB0;
+}
+
+.mim-text-font {
+    font-family: 'Palatino Linotype', 'Palatino', 'Georgia', 'Times New Roman', 'Times', 'serif';
+    font-size: 120%;
+}
+
+
+/*
+** MIM navbar
+*/
+.mim-navbar-background {
+    background: #333;
+}
+
+.mim-navbar-menu-font {
+    color: white;
+}
+
+.mim-navbar-menu-font:hover {
+    color: silver;
+}
+
+
+/*
+** Shuffle selected anchors up by 220px to make
+** sure '#...' links land in the right place
+*/
+.mim-anchor {
+/*
+    display: block;
+    position: relative;
+    top: -220px;
+    visibility: hidden;
+ */
+    scroll-margin-top: 220px;
+    display: block;
+}
+
+
+/*
+** Padding override for tables
+*/
+.mim-table-padding>tbody>tr>td {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+/*
+** Padding override for floating menu items
+*/
+.mim-floating-toc-padding>li>a {
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+/*
+** Padding override for floating links menu panels
+*/
+.mim-panel-heading {
+    padding: 5px;
+}
+
+.mim-panel-body {
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/*
+** Flush footer
+** https://stackoverflow.com/questions/21324395/bootstrap-3-flush-footer-to-bottom-not-fixed
+*/
+.mim-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Sets the height of the footer */
+    height: 100px;
+    border-top: 1px solid #97CE80;
+    /* border-bottom: 1px solid #97CE80; */
+    background: linear-gradient(#FFFFFF, #F8F8F8);
+}
+
+
+
+/*
+** Change bar for deltas
+*/
+.mim-change {
+    border-left: 4px solid #97CE80;
+    padding-left: 4px;
+}
+
+
+/*
+** Search term highlight
+*/
+.mim-highlight {
+    background-color: #FFFFC4;
+}
+
+
+
+/* FOOBAR: vvvvvv */
+.mim-count {
+    background-color: #FCEDA9;
+}
+/* FOOBAR: ^^^^^^ */
+
+
+
+/*
+** QTip backgrounds
+** http://qtip2.com
+*/
+.mim-qtip-yellow {
+    background-color: #FEFF9F;
+}
+
+.mim-qtip-green {
+    background-color: #C9EF9B;
+}
+
+.mim-qtip-blue {
+    background-color: #E5F6FE;
+}
+
+
+/*---------------------------------------------------------------------------*/
+
+
+/*
+** Autocomplete
+** https://github.com/devbridge/jQuery-Autocomplete
+*/
+
+/* This is the div for the autocomplete data */
+.autocomplete {
+    font-size: 1.0em;
+    line-height: 1em;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: left;
+    position: absolute;
+    white-space: nowrap;    /* <= */
+}
+
+.autocomplete-suggestions {
+    border: 1px solid #999999;
+    background: white;
+    cursor: default;
+    overflow: auto;
+/*
+    box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+    box-sizing: border-box
+ */
+}
+
+.autocomplete-suggestions strong {
+    font-weight: bold;
+    color: #038ACA;
+}
+
+.autocomplete-suggestion {
+    font-size: 1.0em;
+    padding: 5px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.autocomplete-no-suggestion {
+    padding: 5px 5px;
+}
+
+.autocomplete-selected {
+    background: #F0F0F0;
+}
+
+.autocomplete-group {
+    padding: 2px 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    display: block;
+    border-bottom: 1px solid #000;
+}
+
+
+/*---------------------------------------------------------------------------*/
+

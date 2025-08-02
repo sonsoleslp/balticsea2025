@@ -1,0 +1,29 @@
+.tooltiplink {
+	position: relative;
+	width: 105px;
+	height: 105px;
+	overflow: hidden;
+}
+
+.imgresize {
+	width: 200px;
+}
+/*
+拡大画像 （枠幅最大）
+*/
+.fullimgresize {
+	width: 350px;
+}
+/*
+bootstrap上書き
+*/
+.tooltip .tooltip-inner {
+	max-width: 500px;
+	word-wrap: break-word;
+}
+
+@media(max-width: 768px) {
+	.tooltip .tooltip-inner {
+		display: none;
+	}
+}
