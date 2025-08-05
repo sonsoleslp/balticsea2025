@@ -27,7 +27,7 @@ export const Lab = (props) => {
           <div className="mx-4">View</div>
         </div>
         <div className="restWindow h-full flex-grow">
-          <div className="w-full h-full overflow-hidden">
+          <div className="w-full h-full">
             <div class="containerwater2">
                 <div class="containerwater">
                     <h1>Water Contaminant Levels by Well</h1>

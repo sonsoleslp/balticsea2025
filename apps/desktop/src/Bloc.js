@@ -68,6 +68,7 @@ function Bloc(props) {
 			    {puzzleCompleted ? (puzzleSolutionSplit[0] || "") : <select id="bloc_input" autoFocus className="bloc_input" 
 			      onChange={handleWrite}
 			      value={text}  >
+            <option value="" disabled></option>
             <option value={1}>Tube 1</option>
             <option value={2}>Tube 2</option>
             <option value={3}>Tube 3</option>
@@ -89,6 +90,7 @@ function Bloc(props) {
           {puzzleCompleted ? (puzzleSolutionSplit[3] || "")  : <select   id="bloc_input4" autoFocus className="bloc_input" 
             onChange={handleWrite4}
             value={text4} >
+            <option value="" disabled></option>
             <option value="SAFE">Safe</option>
             <option value="NOT SAFE">Not Safe</option>
             </select>}

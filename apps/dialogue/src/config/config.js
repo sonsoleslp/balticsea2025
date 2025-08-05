@@ -23,7 +23,7 @@ export let GLOBAL_CONFIG = {
       defaultLocale:"en",
       locales:ESCAPP_LOCALES,
     },
-    appPuzzleIds:[9],
+    appPuzzleIds:[10],
     notifications:false,
     rtc:true,
     forceValidation:false
