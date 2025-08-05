@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDrag } from 'react-dnd'
 
-export default function DraggableImage({ id, src, width }) {
+export default function DraggableImage({ id, src, width, title }) {
   const [{ isDragging }, dragRef] = useDrag(() => ({
     type: 'image',
     item: { id },
@@ -14,9 +14,10 @@ export default function DraggableImage({ id, src, width }) {
     <img
       ref={dragRef}
       src={src}
+      title={title}
       alt=""
       style={{
-        width: width || '8vw',
+        width: width || '7vw',
         height: "auto",
         margin: '10px',
         opacity: isDragging ? 0.5 : 1,

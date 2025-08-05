@@ -22,7 +22,7 @@ export default function DropZone({ side, onDrop, images, center = false, title =
       }}
     >{title && <h2 className="dropzone-title">{title}</h2>}
       {images.map(img => (
-        <DraggableImage key={img.id} id={img.id} src={img.src} width={img.width}/>
+        <DraggableImage key={img.id} id={img.id} src={img.src} width={img.width} title={img.title}/>
       ))}
     </div>
   )

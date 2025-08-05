@@ -19,7 +19,7 @@ export let GLOBAL_CONFIG = {
   localStorageKey: "ESCAPP_FOOD",
   restoreState:"NEVER",
   escapp:{
-    endpoint:"https://escapp.es/api/escapeRooms/309",
+    // endpoint:"https://escapp.es/api/escapeRooms/309",
     localStorageKey: "FOOD_BALTIC",
     imagesPath:"assets/images/",
     I18n:{
