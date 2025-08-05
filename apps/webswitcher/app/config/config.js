@@ -16,15 +16,16 @@ export let GLOBAL_CONFIG = {
   localStorageKey:"WEB_SWITCHER_2022",
   webs:{
     en:[
-      {name:"BalticSeaBioMed 1", url:"https://vishub.org/ediphy_documents/483.full?nowatermark=1", switchOnPuzzle:0},// Start 23
-      {name:"BalticSeaBioMed 2", url:"https://vishub.org/ediphy_documents/484.full?nowatermark=1", switchOnPuzzle:1},// Sauna
-      {name:"BalticSeaBioMed 3", url:"https://vishub.org/ediphy_documents/486.full?nowatermark=1", switchOnPuzzle:2},// Plum
-      {name:"BalticSeaBioMed 4", url:"https://vishub.org/ediphy_documents/487.full?nowatermark=1", switchOnPuzzle:3},// Insecticide
-      {name:"BalticSeaBioMed 5", url:"https://vishub.org/ediphy_documents/488.full?nowatermark=1", switchOnPuzzle:4},// Lab Fakenew -> password 
-      {name:"BalticSeaBioMed 6", url:"https://vishub.org/ediphy_documents/489.full?nowatermark=1", switchOnPuzzle:5},// Desktop
-      {name:"BalticSeaBioMed 7", url:"https://vishub.org/ediphy_documents/490.full?nowatermark=1", switchOnPuzzle:7},// Doctor name
-      {name:"BalticSeaBioMed 8", url:"https://vishub.org/ediphy_documents/491.full?nowatermark=1", switchOnPuzzle:8},// Conversation
-      {name:"BalticSeaBioMed 9", url:"https://vishub.org/ediphy_documents/492.full?nowatermark=1", switchOnPuzzle:9} // Finale
+      {name:"BalticSeaBioMed 0", url:"https://vishub.org/ediphy_documents/483.full?nowatermark=1", switchOnPuzzle:0},// Start 23
+      {name:"BalticSeaBioMed 1", url:"https://vishub.org/ediphy_documents/484.full?nowatermark=1", switchOnPuzzle:1},// Start 23
+      {name:"BalticSeaBioMed 2", url:"https://vishub.org/ediphy_documents/487.full?nowatermark=1", switchOnPuzzle:2},// Sauna
+      {name:"BalticSeaBioMed 3", url:"https://vishub.org/ediphy_documents/486.full?nowatermark=1", switchOnPuzzle:3},// Plum
+      {name:"BalticSeaBioMed 4", url:"https://vishub.org/ediphy_documents/493.full?nowatermark=1", switchOnPuzzle:4},// Insecticide
+      {name:"BalticSeaBioMed 5", url:"https://vishub.org/ediphy_documents/488.full?nowatermark=1", switchOnPuzzle:5},// Lab Fakenew -> password 
+      {name:"BalticSeaBioMed 6", url:"https://vishub.org/ediphy_documents/489.full?nowatermark=1", switchOnPuzzle:6},// Desktop
+      {name:"BalticSeaBioMed 7", url:"https://vishub.org/ediphy_documents/490.full?nowatermark=1", switchOnPuzzle:8},// Doctor name
+      {name:"BalticSeaBioMed 8", url:"https://vishub.org/ediphy_documents/491.full?nowatermark=1", switchOnPuzzle:9},// Conversation
+      {name:"BalticSeaBioMed 9", url:"https://vishub.org/ediphy_documents/492.full?nowatermark=1", switchOnPuzzle:10} // Finale
     ]
   },
   escapp:{

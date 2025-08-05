@@ -123,6 +123,7 @@ function App() {
 
 
   const prepareSetup = (er_state) => {
+    // dispatch({type: "WALLUNLOCK"});return;
     if (er_state && er_state.puzzlesSolved && er_state.puzzlesSolved.indexOf(GLOBAL_CONFIG.escapp.appPuzzleIds[0])!=-1){
       dispatch({type: "WALLUNLOCK"});
     } else {

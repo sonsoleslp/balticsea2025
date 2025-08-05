@@ -381,7 +381,7 @@ body[data-theme="dark"] .win11Scroll,
       visibility: visible;
     }
 
-    input#bloc_input {
+    select.bloc_input,input.bloc_input {
       background: transparent;
       font-size: 2em;
       font-size: 2.3vw;

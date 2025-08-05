@@ -30,49 +30,35 @@ export const Lab = (props) => {
           <div className="w-full h-full overflow-hidden">
             <div class="containerwater2">
                 <div class="containerwater">
-                    <h1>Water Sample Test Results</h1>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Toxin</th>
-                                <th>Level (ppm)</th>
-                                <th>Error Margin (ppm)</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Cyanide</td>
-                                <td>0.02</td>
-                                <td>±0.01</td>
-                                <td class="safe">Safe</td>
-                            </tr>
-                            <tr>
-                                <td>Arsenic</td>
-                                <td>0.005</td>
-                                <td>±0.002</td>
-                                <td class="safe">Safe</td>
-                            </tr>
-                            <tr>
-                                <td>Lead</td>
-                                <td>0.003</td>
-                                <td>±0.001</td>
-                                <td class="safe">Safe</td>
-                            </tr>
-                            <tr>
-                                <td>Mercury</td>
-                                <td>0.001</td>
-                                <td>±0.0005</td>
-                                <td class="safe">Safe</td>
-                            </tr>
-                            <tr>
-                                <td>Cadmium</td>
-                                <td>0.002</td>
-                                <td>±0.001</td>
-                                <td class="safe">Safe</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h1>Water Contaminant Levels by Well</h1>
+                   <table>
+                  <caption>Contaminant concentration in µg/l</caption>
+                  <thead>
+                    <tr>
+                      <th>Well</th>
+                      <th>Tube ID</th>
+                      <th>Cd (µg/l)</th>
+                      <th>CN- (µg/l)</th>
+                      <th>Pb (µg/l)</th>
+                      <th>Hg (µg/l)</th>
+                      <th>MC-LR (µg/l)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>A01</td><td>1</td><td>0.8</td><td>20</td><td>2.0</td><td>1.0</td><td>0.8</td></tr>
+                    <tr><td>A02</td><td>2</td><td>0.7</td><td>18</td><td>1.8</td><td>0.7</td><td>0.7</td></tr>
+                    <tr><td>A03</td><td>3</td><td>0.9</td><td>15</td><td>1.5</td><td>0.4</td><td>0.7</td></tr>
+                    <tr><td>A04</td><td>4</td><td>0.8</td><td>13</td><td>1.1</td><td>0.3</td><td>0.9</td></tr>
+                    <tr><td>B01</td><td>1</td><td>0.7</td><td>22</td><td>2.0</td><td>1.0</td><td>0.8</td></tr>
+                    <tr><td>B02</td><td>2</td><td>0.7</td><td>18</td><td>1.8</td><td>0.7</td><td>0.8</td></tr>
+                    <tr><td>B03</td><td>3</td><td>0.9</td><td>15</td><td>1.6</td><td>0.5</td><td>0.7</td></tr>
+                    <tr><td>B04</td><td>4</td><td>0.8</td><td>13</td><td>1.1</td><td>0.3</td><td>0.9</td></tr>
+                    <tr><td>C01</td><td>1</td><td>0.8</td><td>21</td><td>2.0</td><td>1.0</td><td>0.8</td></tr>
+                    <tr><td>C02</td><td>2</td><td>0.7</td><td>18</td><td>1.9</td><td>0.8</td><td>0.7</td></tr>
+                    <tr><td>C03</td><td>3</td><td>0.9</td><td>16</td><td>1.5</td><td>0.4</td><td>0.6</td></tr>
+                    <tr><td>C04</td><td>4</td><td>0.8</td><td>13</td><td>1.1</td><td>0.3</td><td>0.9</td></tr>
+                  </tbody>
+                </table>
                 </div>
             </div>
             {/*<textarea className="noteText win11Scroll" id="textpad" defaultValue={extra.text ? props.I18n.getTrans(extra.text) : ""} disabled={extra.text}/>*/}

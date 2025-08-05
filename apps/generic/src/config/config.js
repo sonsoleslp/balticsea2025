@@ -16,7 +16,7 @@ export let GLOBAL_CONFIG = {
   availableLocales:[  "en" ],
   defaultLocale:"es",
   locale: undefined,
-  localStorageKey:"ESCAPP_2GENERIC",
+  localStorageKey: searchParams.has('puzzleId') ?  ("ESCAPP_2GENERIC" + searchParams.get('puzzleId')) : "ESCAPP_2GENERIC",
   restoreState:"NEVER",
   escapp:{
     //endpoint:"https://escapp.dit.upm.es/api/escapeRooms/306",

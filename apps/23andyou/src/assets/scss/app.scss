@@ -8,20 +8,28 @@
 html, body {
   margin:0;
   padding: 0;
-
   font-family: $font-family-base;
   font-size: $font-base;
   //overflow:hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
-html {
+body {
+  background-image: url(https://vishub.org/pictures/27551.png);
+  background-size: cover;
+  /* padding: 0vh 24vw 0vh 11vw;*/
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .App {
-  overflow: scroll;
-  padding: 5vh 10vw;
+  overflow: auto;
+  padding: 5vh 12vw;
+  height: 77vh;
+  width: 53vw;
   border-radius: .25rem;
-
+  background: transparent;
 }
 
  
@@ -395,7 +403,7 @@ button {
 
 .logo {
   float:right;
-  width: 180px;
+  width: 100px;
 
 }
 
@@ -452,7 +460,7 @@ button {
     right: 0%;
     display: block;
     width: 35%; 
-    font-family: "Reenie Beanie", mono;
+    font-family: "Cambria", mono;
     transition: bottom 0.4s;
     .bloc_content {
       position: absolute;
@@ -574,3 +582,37 @@ h2 {
   font-family: inherit;
   font-size: .6em;
 }
+
+
+
+table.results {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: transparent;
+ 
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
+    th {
+      background-color: #0000ff50;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+}
+
+.footer-note {
+      margin-top: 20px;
+      font-size: 14px;
+    }
