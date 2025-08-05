@@ -1,0 +1,148 @@
+@import 'lib/mixins';
+@import 'lib/vars';
+
+@import 'partials/header';
+@import 'partials/content';
+@import 'partials/footer';
+@import 'partials/modal';
+
+#root {
+  z-index: 0 !important;
+}
+html, body {
+  margin:0;
+  padding: 0;
+
+  font-family: $font-family-base;
+  font-size: $font-base;
+  //overflow:hidden;
+}
+
+html {
+  background: url("../images/floor.png") no-repeat center center fixed ;
+  background-color: #c8b197;
+  background-size: cover;
+}
+
+.App {
+  //height: 100vh;
+  overflow: scroll;
+  padding: 5vh 10vw;
+  border-radius: .25rem;
+  display: grid;
+  justify-content: stretch;
+  align-content: stretch;
+  grid-template-rows: 15% 70% 15%;
+  height: 90vh;
+
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1280px) {
+  .App {
+      grid-template-rows: 12% 78% 10%;
+    }
+}
+
+#theclickable {
+  cursor: pointer !important;
+}
+
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.passed-true .dropzone {
+  border-color: green;
+}
+.passed-false .dropzone {
+  border-color: red;
+}
+.dropzone {
+  width: 25%;
+  height: 80%;
+  border: 0.4vw dashed #777;
+  border-radius: 8px;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.dropzone.center {
+  width: 50%;
+  background: transparent;
+  border: none;
+}
+
+
+.confirm {
+    position: fixed;
+    margin: auto;
+    bottom: 0;
+    left: 43vw;
+    background: lightgreen;
+    font-size: 4vw;
+    padding: 1vw;
+    margin-bottom: 2vw;
+    border-radius: 1vw;
+    &:hover {
+      transform: scale(0.9);
+    }
+}
+
+
+.dropzone-title {
+  position: absolute;
+  top: 0vw;
+  font-size: 2.5vw;
+  background: white
+  
+}
+
+
+.final {
+  font-family: 'Open Sans', sans-serif;
+  flex: 1;
+  padding: 1em;
+  background-color: rgb(0,0,0);
+  color: white;
+  height: max-content;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  font-size: 1.2vw;
+  height: 4vw;
+  p {
+   width: 92vw;
+  }
+}
+
+
+.submitImage {
+  position: absolute;
+  bottom: 0; right: 2vw;
+  width: 3.7vw;
+  margin: 1vw;
+  cursor: pointer;
+
+}

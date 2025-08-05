@@ -20,7 +20,7 @@ export const Lab = (props) => {
       id={wnapp.icon + "App"}
     >
       <ToolBar app={wnapp.action} icon={wnapp.icon} size={wnapp.size} name="Lab tests" />
-      <div className="windowScreen flex flex-col" data-dock="true">
+      <div className="windowScreen flex flex-col" data-dock="true" style={{overflow: "auto"}}>
         <div className="flex text-xs py-2 topBar">
           <div className="mx-2">File</div>
           <div className="mx-4">Edit</div>
