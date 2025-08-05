@@ -10,14 +10,14 @@ import "../assets/scss/app.scss";
 let escapp;
 
 const initialImages = [
-  { id: 1, src: "assets/images/food/wine.png", width: "6vw" },
-  { id: 2, src: "assets/images/food/candy.png"  },
-  { id: 3, src: "assets/images/food/fish.png"  },
-  { id: 4, src: "assets/images/food/banana.png"  },
-  { id: 5, src: "assets/images/food/jam.png"  },
-  { id: 6, src: "assets/images/food/bread.png"  },
-  { id: 7, src: "assets/images/food/coffee.png"  },
-  { id: 8, src: "assets/images/food/tomato.png"  }
+  { id: 1, src: "images/food/wine.png", width: "6vw" },
+  { id: 2, src: "images/food/candy.png"  },
+  { id: 3, src: "images/food/fish.png"  },
+  { id: 4, src: "images/food/banana.png"  },
+  { id: 5, src: "images/food/jam.png"  },
+  { id: 6, src: "images/food/bread.png"  },
+  { id: 7, src: "images/food/coffee.png"  },
+  { id: 8, src: "images/food/tomato.png"  }
 ]
 
 export default function App() {
