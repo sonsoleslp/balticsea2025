@@ -25,9 +25,9 @@ body {
 
 .App {
   overflow: auto;
-  padding: 5vh 12vw;
+  margin-left: 23vw !important;
   height: 77vh;
-  width: 53vw;
+  width: 43vw;
   border-radius: .25rem;
   background: transparent;
 }
@@ -586,30 +586,30 @@ h2 {
 
 
 table.results {
-      border-collapse: collapse;
-      width: 100%;
-      background-color: transparent;
- 
-    th, td {
-      text-align: left;
-      padding: 12px;
-      border: 1px solid #ddd;
-      vertical-align: top;
-    }
-    th {
-      background-color: #0000ff50;
-    }
-    tr:hover {
-      background-color: #f1f1f1;
-    }
-    
-    a {
-      color: #0056b3;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+  border-collapse: collapse;
+  width: 100%;
+  background-color: transparent;
+
+  th, td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+  }
+  th {
+    background-color: #0000ff50;
+  }
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  a {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 .footer-note {
