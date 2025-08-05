@@ -141,7 +141,9 @@ var apps = [{
   name: 'Lab',
   icon: 'lab',
   type: 'app',
-  action: 'LAB'
+  action: 'LAB',
+  extra: JSON.stringify({text: "news", image: 'asset/boats.jpg', showBloc: true})
+
 },
 {
   name: 'Notepad',
