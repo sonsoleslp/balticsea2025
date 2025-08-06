@@ -60,7 +60,7 @@ export default function App() {
     <div className="App">
 
         <h1 className="maintitle"> 
-          <img className="logo" src="./assets/images/downloadlogo.jpeg"/> Precision in Every Code, Care in Every Dose 
+          <img className="logo" src="images/downloadlogo.jpeg"/> Precision in Every Code, Care in Every Dose 
         </h1>
         <br/>
         <br/>
@@ -68,10 +68,9 @@ export default function App() {
         <div style={{textAlign:"right"}}>4.8.2025</div>
         <br/>
         <br/>
-        <br/>
         <div>
 
-        <p>Dear Bob, </p>
+        <p>Dear Alex, </p>
 
         <br/>
 
@@ -81,17 +80,16 @@ export default function App() {
 
         <p>Hope that you are happy with the results and they help you to adjust your medication together with your doctor. Please do not hesitate to contact us if you have any questions. </p>
 
-        <br/>
 
         <p>Best Regards </p>
 
 
-        <p> <b> Eric Samson, Professor </b></p>
+        <p> <b> Eric Samson, Professor </b><br/>
 
-        <p>  MBBS (HONS) MD (HONS) MAACB FRCPA PHD </p>
-
-        <p>  Speciality in Genetics, Clinical Pharmacology and Pathology </p>
+          MBBS (HONS) MD (HONS) MAACB FRCPA PHD <br/>
+         Speciality in Genetics, Clinical Pharmacology and Pathology </p><div style={{float:"right"}}>1/2</div>
         <br/>
+        
         <br/>
         <hr/>
 
@@ -115,88 +113,89 @@ export default function App() {
           <tbody>
             <tr>
               <td>ABCG2</td>
-              <td>c.421C/C</td>
-              <td>Normal BCRP activity (NF)</td>
-              <td>No need to modify the dose of BCRP transporter mediated drugs based on this genotype.</td>
+              <td>c.421C/C NF</td>
+              <td>ABCG2 c.421C /C. <br/> Normal BCRP activity (NF)</td>
+              <td>This genotype is associated with a normal BCRP mediated drug transport rate. There is no need to modify the dose of BCRP transporter mediated drugs based on the genotype..</td>
             </tr>
             <tr>
               <td>CYP2B6</td>
-              <td>*1/*5</td>
-              <td>Normal CYP2B6 metabolism (NM)</td>
-              <td>No need to modify CYP2B6-mediated drug therapy or dose based on this genotype.</td>
+              <td>*1*5 NM</td>
+              <td>CYP2B6*1/ *5 <br/> Normal CYP2B6 metabolism (NM)</td>
+              <td>This genotype is associated with normal CYP2B6 mediated drug metabolism. There is no need to modify CYP2B6 mediated drug therapy or dose based on this genotype.</td>
             </tr>
             <tr>
-              <td>CYP2C9</td>
-              <td>*1/*2</td>
-              <td>Less than normal CYP2C9 metabolism (IM)</td>
-              <td>May require lower doses due to slower metabolism. Monitor for adverse reactions.</td>
+              <td>CYP2C9*</td>
+              <td>*1*2 IM</td>
+              <td>CYP2C9*1/ *2 <br/>Less than normal CYP2C9 metabolism (IM)</td>
+              <td>This genotype is associated with slower than normal CYP2C9 mediated drug metabolism. Plasma concentrations of many CYP2C9-mediated drugs may be higher than normal, resulting in lower than normal dose requirements and increased risk of adverse reactions. There is usually no need to modify CYP2C9-mediated drug therapy or dose based on this genotype..</td>
             </tr>
             <tr>
-              <td>CYP2C19</td>
-              <td>*1/*1</td>
+              <td>CYP2C19*</td>
+              <td>*1 *1 NM</td>
               <td>Normal CYP2C19 metabolism (NM)</td>
-              <td>No dose modification needed for CYP2C19-mediated drugs.</td>
+              <td>This genotype is associated with normal CYP2C19-mediated drug metabolism. There is no need to modify CYP2C19-mediated drug therapy or dose based on the genotype.</td>
             </tr>
             <tr>
               <td>CYP2D6</td>
-              <td>*1/*41</td>
-              <td>Normal CYP2D6 metabolism (NM)</td>
-              <td>No adjustment required for CYP2D6 substrates.</td>
+              <td>*1*41 NM</td>
+              <td>CYP2D6*1/ *41 <br/> Normal CYP2D6 metabolism (NM)</td>
+              <td>This genotype is associated with normal CYP2D6 mediated drug metabolism. There is no need to modify CYP2D6 mediated drug therapy or dose based on the genotype.</td>
             </tr>
             <tr>
               <td>CYP3A5</td>
-              <td>*3/*3</td>
-              <td>Slow CYP3A5 metabolism (PM)</td>
-              <td>No need to change tacrolimus dose.</td>
+              <td>*3*3 PM</td>
+              <td>CYP3A5*3/*3 <br/> Slow CYP3A5 metabolism (PM)</td>
+              <td>Based on the CYP3A5*3/*3 genotype, there is no need to change the usual dose of systemically administered tacrolimus.</td>
             </tr>
             <tr>
               <td>CYP4F2</td>
-              <td>*1/*1</td>
-              <td>Normal warfarin dose requirement</td>
-              <td>Other factors like CYP2C9/VKORC1 variants, age, etc., also affect warfarin dose.</td>
+              <td>*1*1</td>
+              <td>CYP4F2*1/*1</td>
+              <td>This genotype is associated with a normal warfarin dose requirement. In addition, many other factors such as variations in CYP2C9 and VKORC1 genes, age, weight, gender, drug interactions, other diseases, etc., influence the warfarin dose.</td>
             </tr>
             <tr>
               <td>DPYD</td>
-              <td>c.1236G/A, c.1679T/T, c.1905+1G/G, c.2846A/A</td>
-              <td>Activity score 1.5 (IM)</td>
-              <td>Reduce starting dose of fluoropyrimidines due to increased toxicity risk.</td>
+              <td>cc.1236G/A <br/> c.1679T/T <br/>  c.1905+1G/G <br/> c.2846A/A <br/> AS 1.5 IM</td>
+              <td>Activity score 1.5, decreased DPD activity</td>
+              <td>This genotype is associated with reduced DPD activity and an increased risk of severe and fatal adverse effects from systemically administered fluoropyrimidines. It is recommended to reduce the starting dose of 5-fluorouracil and capecitabine and the starting dose of tegafur.</td>
             </tr>
             <tr>
               <td>NUDT15</td>
-              <td>*1/*1</td>
-              <td>Normal NUDT15 metabolism (NM)</td>
-              <td>No dose adjustment needed for thiopurines unless other toxicity risk present.</td>
+              <td>*1*1 NM</td>
+              <td>NUDT15*1/ *1 <br/> Normal NUDT15 metabolism (NM)</td>
+              <td>This genotype is associated with normal NUDT15 mediated drug metabolism. There is no need to change the starting dose of azathioprine, mercaptopurine or tioguanine based on the genotype. However, some patients may experience severe toxicity due to other causes and should be dose reduced or discontinued. The TPMT genotype should also be taken into account in the dose selection of thiopurines.</td>
             </tr>
             <tr>
               <td>TST</td>
-              <td>c.616C/T</td>
-              <td>Decreased TST activity</td>
-              <td>Can affect detoxification of cyanide; clinical implications vary.</td>
+              <td>c.616C/T DF</td>
+              <td>TST c.616C/T <br/> Decreased TST activity</td>
+              <td>This genotype is associated with reduced TST activity and can affect the efficiency of TST dependent detoxification processes, like detoxifying cyanide by converting it to less toxic thiocyanate.</td>
             </tr>
             <tr>
               <td>SLCO1B1</td>
-              <td>*1/*15</td>
-              <td>Decreased OATP1B1 activity (DF)</td>
-              <td>Increased muscle toxicity risk with statins like simvastatin.</td>
+              <td>DF</td>
+              <td>SLCO1B1*1/*15 <br/> Decreased OATP1B1 activity (DF)</td>
+              <td>This genotype is associated with slower than normal OATP1B1-mediated transport of drugs into liver cells and an increased risk of muscle adverse effects from atorvastatin, lovastatin and simvastatin.</td>
             </tr>
             <tr>
               <td>TPMT</td>
-              <td>*1/*1</td>
-              <td>Normal TPMT metabolism (NM)</td>
-              <td>No change in thiopurine starting dose needed unless other risk factors exist.</td>
+              <td>*1*1 NM</td>
+              <td>TPMT*1/*1 <br/> Normal TPMT metabolism (NM)</td>
+              <td>This genotype is associated with normal TPMT mediated drug metabolism. There is no need to change the starting dose of azathioprine, mercaptopurine or thioguanine based on the genotype. However, some patients may experience severe toxicity due to other causes and should be dose reduced or discontinued. The NUDT15 genotype should also be taken into account in the dose selection of thiopurines.</td>
             </tr>
             <tr>
-              <td>VKORC1</td>
+              <td>VKORC1*</td>
               <td>1173C/T</td>
-              <td>Lower warfarin dose requirement</td>
-              <td>Use <a href="https://www.warfarindosing.org" target="_blank">warfarindosing.org</a> to estimate therapeutic dose in new patients.</td>
+              <td>VKORCl 1173C/T genotype</td>
+              <td>This genotype is associated with lower than normal warfarin dose requirements. In addition, many other factors such as CYP2C9 and CYP4F2 gene variants, age, weight, gender, drug interactions and other medical conditions influence warfarin dose.</td>
             </tr>
           </tbody>
         </table>
 
         <div className="footer-note">
-          * Genotypes marked as IM (Intermediate Metabolizer), NM (Normal Metabolizer), PM (Poor Metabolizer), DF (Decreased Function), or NF (Normal Function). For personalized treatment recommendations, consult your physician.
+          * Part of our warfarin panel PGxVAR-L. Use www.warfarindosing.org to estimate the therapeutic dose in patients new to warfarin.
         </div>
+        <div style={{float:"right"}}>2/2</div>
         </div>
 
         <Bloc checkPlace={submit} puzzleSolution={puzzleSolution} puzzleCompleted={puzzleCompleted} dropdown={drop} />
