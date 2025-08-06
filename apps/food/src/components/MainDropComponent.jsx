@@ -1,10 +1,32 @@
 import React, { useState } from 'react'
-import { DndProvider } from 'react-dnd'
-import { HTML5Backend } from 'react-dnd-html5-backend'
+
+
 import DropZone from './Dropzone.jsx'
 import DraggableImage from './DraggableImage.jsx'
 
+import { DndProvider } from 'react-dnd'
+import { MultiBackend, TouchTransition, PointerTransition } from 'react-dnd-multi-backend'
+import { HTML5Backend } from 'react-dnd-html5-backend'
+import { TouchBackend } from 'react-dnd-touch-backend'
 
+const DND_BACKEND = MultiBackend
+
+const DND_OPTIONS = {
+  backends: [
+    {
+      backend: HTML5Backend,
+      transition: PointerTransition,
+    },
+    {
+      backend: TouchBackend,
+      options: {
+        enableMouseEvents: true, // so you can use mouse + touch
+      },
+      preview: true,
+      transition: TouchTransition,
+    }
+  ]
+}
 
 export default function MainDropComponent(props) {
 
@@ -34,7 +56,7 @@ export default function MainDropComponent(props) {
   }
 
   return (
-    <DndProvider backend={HTML5Backend}>
+    <DndProvider backend={DND_BACKEND} options={DND_OPTIONS}>
       <div className="container">
         <DropZone
           passed = {props.passed} 

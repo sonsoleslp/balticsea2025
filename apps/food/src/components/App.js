@@ -10,14 +10,14 @@ import "../assets/scss/app.scss";
 let escapp;
 
 const initialImages = [
-  { id: 1, title: "wine", src: "images/food/wine.png", width: "6vw" },
-  { id: 2, title: "candy", src: "images/food/candy.png"  },
-  { id: 3, title: "fish", src: "images/food/fish.png"  },
-  { id: 4, title: "banana", src: "images/food/banana.png"  },
-  { id: 5, title: "cherry jam", src: "images/food/jam.png"  },
-  { id: 6, title: "bread", src: "images/food/bread.png"  },
-  { id: 7, title: "espresso machiato", src: "images/food/coffee.png"  },
-  { id: 8, title: "tomato", src: "images/food/tomato.png"  }
+  { id: 1, title: "wine", src: "assets/images/food/wine.png", width: "6vw" },
+  { id: 2, title: "candy", src: "assets/images/food/candy.png"  },
+  { id: 3, title: "fish", src: "assets/images/food/fish.png"  },
+  { id: 4, title: "banana", src: "assets/images/food/banana.png"  },
+  { id: 5, title: "cherry jam", src: "assets/images/food/jam.png"  },
+  { id: 6, title: "bread", src: "assets/images/food/bread.png"  },
+  { id: 7, title: "espresso machiato", src: "assets/images/food/coffee.png"  },
+  { id: 8, title: "tomato", src: "assets/images/food/tomato.png"  }
 ]
 
 export default function App() {
@@ -116,7 +116,8 @@ export default function App() {
           centerImages={centerImages}/>
       {passed ? 
       <div className="final">
-        <p>There was some cherry jam that I thought was very bitter, so I quickly stopped eating it, but Alex seemed to be eating it like candy! I wonder if it could have made them ill?</p>
+        <p>Alex said this jam was made with a special family recipe, including the cherry pits. Most other recipes would skip the pits due to the bitter taste. 
+        Alex liked it so much and ate the bread crackers with a big pile of jam on them! We all tried only a tiny bit. Would this special cherry jam make Alex ill?</p>
         <img className={"submitImage"} src={"https://vishub.org/pictures/24411.png"} onClick={submit}/>
       </div>:
       <button className="confirm" onClick={check}>Confirm</button> }
