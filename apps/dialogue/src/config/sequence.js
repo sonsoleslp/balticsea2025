@@ -19,7 +19,7 @@ export let sequence = {
 				},
 				{
 					question: "OK, I see, that's most interesting. But how was Alex exposed to cyanide?", 
-					answer:"Even tiny amounts of cyanide could be lethal for Alex since they carry a rare GST polymorphism that is associated with altered cyanide metabolism.", 
+					answer:"Even tiny amounts of cyanide could be lethal for Alex since they carry a rare TST polymorphism that is associated with altered cyanide metabolism.", 
 					answers: [
 						{	
 							answer:"It was from the cyanobacteria in the Baltic Sea, which they were exposed to when swimming. (when they fell into the sea while collecting water samples.)",
@@ -27,7 +27,7 @@ export let sequence = {
 						},
 						{	
 							answer:"It was from the cherry jam that they ate at the potluck dinner. Cherry kernels contain cyanide.",
-							question: "Is that possible? Let me check …... Yes, you're right! Cherry kernels eaten in large amounts could cause cyanide poisoning. But are you sure Alex has a GST polymorphism? It's extremely rare!", 
+							question: "Is that possible? Let me check …... Yes, you're right! Cherry kernels eaten in large amounts could cause cyanide poisoning. But are you sure Alex has a TST polymorphism? It's extremely rare!", 
 							answers: [
 								{
 									question: "Alright...Please make sure of what you are saying!", 

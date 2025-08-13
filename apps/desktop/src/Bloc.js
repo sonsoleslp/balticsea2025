@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 
 function Bloc(props) {
   const dispatch = useDispatch();
+  const [minimize, setMinimize] = useState(false);
   const [text, setText] = useState("");
   const [text2, setText2] = useState("");
   const [text3, setText3] = useState("");
@@ -35,7 +36,9 @@ function Bloc(props) {
       setEscappFailMessage(undefined);
     }
   }
-
+  const toggleMinimize = (e) => {
+    setMinimize(!minimize)
+  }
   const textSolve = (text) => {
   	checkPlace(text, (success) => {
   		if (success) {
@@ -59,13 +62,13 @@ function Bloc(props) {
   }
 
 
-  return <div className={"bloc" + (props.show ? " show" : "")} >
+  return <div className={"bloc" + (props.show ? " show" : "") + (minimize ? " minimize" : "")} >
   		<div>	
-		    <img src="img/asset/notebook.svg"/>
-		    <div className="bloc_content">
+		    <img src="img/asset/notebook.svg" onClick={toggleMinimize}/>
+        <div className="bloc_content" onClick={e=>e.stopPropagation()}>
 			    <p>
           <b>{props.I18n.getTrans("previous_text")} </b>
-			    {puzzleCompleted ? (puzzleSolutionSplit[0] || "") : <select id="bloc_input" autoFocus className="bloc_input" 
+			    {puzzleCompleted ? (<span>{puzzleSolutionSplit[0]}<br/></span> || "") : <select id="bloc_input" autoFocus className="bloc_input" 
 			      onChange={handleWrite}
 			      value={text}  >
             <option value="" disabled></option>
@@ -75,19 +78,19 @@ function Bloc(props) {
             <option value={4}>Tube 4</option>
             </select>}
           <b>{props.I18n.getTrans("previous_text2")} </b>
-          {puzzleCompleted ? (puzzleSolutionSplit[1] || "") : <input type="number" id="bloc_input2" autoFocus className="bloc_input" 
+          {puzzleCompleted ? (<span>{puzzleSolutionSplit[1]}<br/></span> || "") : <input type="number" id="bloc_input2" autoFocus className="bloc_input" 
             onChange={handleWrite2}
             value={text2}
             placeholder={props.I18n.getTrans("placeholder")}
             autoCorrect="off" autoComplete="off" />}
           <b>{props.I18n.getTrans("previous_text3")} </b>
-          {puzzleCompleted ? (puzzleSolutionSplit[2] || "")  : <input type="number" id="bloc_input3" autoFocus className="bloc_input" 
+          {puzzleCompleted ? (<span>{puzzleSolutionSplit[2]}<br/></span> || "")  : <input type="number" id="bloc_input3" autoFocus className="bloc_input" 
             onChange={handleWrite3}
             value={text3}
             placeholder={props.I18n.getTrans("placeholder")}
             autoCorrect="off" autoComplete="off" />}
           <b>{props.I18n.getTrans("previous_text4")} </b>
-          {puzzleCompleted ? (puzzleSolutionSplit[3] || "")  : <select   id="bloc_input4" autoFocus className="bloc_input" 
+          {puzzleCompleted ? (<span>{puzzleSolutionSplit[3]}<br/></span> || "")  : <select   id="bloc_input4" autoFocus className="bloc_input" 
             onChange={handleWrite4}
             value={text4} >
             <option value="" disabled></option>

@@ -11,7 +11,7 @@ export let GLOBAL_CONFIG = {
   localStorageKey:"DESKTOP_2025",
   mailAppLink: "https://vishubcode.org/webappscode/549/index.html?url=https%3A%2F%2Fging.github.io%2FMalditaER%2FFakemail",
   escapp:{
-    // endpoint:"https://escapp.dit.upm.es/api/escapeRooms/306",
+    endpoint:"https://escapp.es/api/escapeRooms/309",
     localStorageKey:"ESCAPP_DESKTOP_2025",
     restoreState:"AUTO",
     imagesPath:"assets/images/",

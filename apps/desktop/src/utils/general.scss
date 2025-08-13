@@ -364,7 +364,8 @@ body[data-theme="dark"] .win11Scroll,
     bottom: -200%;
     right: 0%;
     display: block;
-    width: 45%; 
+    width: 56%; 
+
     font-family: "Cambria", mono;
     visibility: hidden;
     transition: bottom 0.4s;
@@ -373,6 +374,7 @@ body[data-theme="dark"] .win11Scroll,
       width: 50%;
       top: 20%;
       left: 20%;
+      height: 100%;
       font-size: 1.5em;
       font-size: 1.9vw;
     }
@@ -380,7 +382,15 @@ body[data-theme="dark"] .win11Scroll,
       bottom: -10%;
       visibility: visible;
     }
+    &.show.minimize {
+      bottom: -70%;
+      visibility: visible;
+    }
 
+   
+
+
+    
     select.bloc_input,input.bloc_input {
       background: transparent;
       font-size: 1.8em;
@@ -451,4 +461,9 @@ body[data-theme="dark"] .win11Scroll,
 }
 .containerwater {
   color: black !important;
+}
+
+
+.contentarea .gridshow[data-size=lg] .conticon {
+  display: inline-block;
 }
