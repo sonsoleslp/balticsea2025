@@ -39,13 +39,13 @@ export let NEWSen = [
   {
     "iframe":true,
     "path": "https://sonsoles.me/balticsea2025/articles/cytochrome.html",    
-    "true_or_false": true,
+    "true_or_false": false,
     "feedback": ""
   },
   {
     "iframe":true,
     "path": "https://sonsoles.me/balticsea2025/articles/blood.html",    
-    "true_or_false": true,
+    "true_or_false": false,
     "feedback": ""
   }
 ]
