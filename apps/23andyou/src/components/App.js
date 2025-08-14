@@ -60,7 +60,7 @@ export default function App() {
     <div className="App">
 
         <h1 className="maintitle"> 
-          <img className="logo" src="images/downloadlogo.jpeg"/> Precision in Every Code, Care in Every Dose 
+          <img className="logo" src="assets/images/downloadlogo.jpeg"/> Precision in Every Code, Care in Every Dose 
         </h1>
         <br/>
         <br/>
